@@ -4,7 +4,7 @@ def zen_score(weights, values):
     return total
 
 list_weight = [1, 2, 3]
-list_values = [1, 3, 4]
+list_values = [1, 3, 3]
 result = zen_score(list_weight, list_values)
 
 print "The weight is: ", result
