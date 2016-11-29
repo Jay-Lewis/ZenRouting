@@ -1,4 +1,10 @@
-def zen_score(weights, values):
+def zen_score(weights,edge_dictinonary):      
+    keys = ['traffic','time','distance']
+    values=[]
+    
+    for key in keys:
+        values.append(edge_dictionary[key])
+        
     mult_lists = [a * b for a, b in zip(weights, values)]       #Multiply both lists
     total = sum(i for i in mult_lists)       #Add lists
     return total
