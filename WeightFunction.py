@@ -3,8 +3,12 @@ def zen_score(weights, values):
     total = sum(i for i in mult_lists)       #Add lists
     return total
 
+"""TEST
+
 list_weight = [1, 2, 3]
 list_values = [1, 3, 3]
 result = zen_score(list_weight, list_values)
 
 print "The weight is: ", result
+
+"""
