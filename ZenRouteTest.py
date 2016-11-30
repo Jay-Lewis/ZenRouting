@@ -86,7 +86,7 @@ for index, path in enumerate(paths):
 
 
 # Sample Waypoints from Paths (max 23 allowed)
-numwaypoints = 8
+numwaypoints = 3
 sampledpaths = []
 
 for path in paths:

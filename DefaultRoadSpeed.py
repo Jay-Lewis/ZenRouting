@@ -3,6 +3,7 @@ __author__ = 'Justin'
 def getdefaultspeed(string):
 
     unknownspeed = 30
+    restrictedspeed = 0.01
 
     defaultspeeds = {
         'motorway':70,
@@ -18,7 +19,12 @@ def getdefaultspeed(string):
         'primary_link': 35,
         'secondary_link':25,
         'tertiary_link': 20,
-        'service': 12
+        'service': 12,
+        'track':restrictedspeed,
+        'cycleway':restrictedspeed,
+        'footway':restrictedspeed,
+        'rail':restrictedspeed,
+        'steps':restrictedspeed,
     }
 
     speed = defaultspeeds.get(string,unknownspeed)
