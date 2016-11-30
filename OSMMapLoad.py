@@ -7,7 +7,7 @@ from geopy.distance import vincenty as latlondist
 
 # Load geoJSON strings from file
 
-with open('roadspeeds.geojson', 'r') as myfile:
+with open('cstat_map.geojson', 'r') as myfile:
     geoJSONstring=myfile.read().replace('\n', '')
 
 # Load geoJSON strings into geojson objects
@@ -17,6 +17,8 @@ roaddata = geojson.loads(geoJSONstring)
 meterconv = 1609.344 # miles to meters
 
 FullGraph = nx.DiGraph()
+# restrictedTypes = ['service','track','residential','living_street','rail','footway','path','steps','cycleway']
+restrictedTypes = ['service','track','rail','footway','path','steps','cycleway']
 
 for feature in roaddata.features:
     # Check if feature is a road
@@ -28,35 +30,38 @@ for feature in roaddata.features:
         oneway = feature.properties.get("oneway",'unknown')
         speedstr = feature.properties.get("maxspeed",'unknown')
 
+
         if(speedstr == 'unknown'):
             speed = DRS.getdefaultspeed(speedstr)
         else:
             speednums = [int(s) for s in speedstr.split() if s.isdigit()]
             speed = speednums[0]
 
-        # check for oneway vs. twoway streets (twoway streets need two directed edges)
-        if(oneway != 'yes'):
-            #add directed edges and associated nodes for feature element
+        if((edgetype not in restrictedTypes) or (speed >= 35 )):
+
+            # check for oneway vs. twoway streets (twoway streets need two directed edges)
+            if(oneway != 'yes'):
+                #add directed edges and associated nodes for feature element
+                for latlon in feature.geometry.coordinates:
+                    FullGraph.add_node(str(latlon),lon =latlon[0] ,lat =latlon[1],usage = 0)
+                for counter in range(len(feature.geometry.coordinates)-1,0,-1):
+                    #find distance between node pair
+                    distance = meterconv*latlondist(feature.geometry.coordinates[counter],feature.geometry.coordinates[counter-1]).miles
+                    #add edge with edge properties
+                    basetime = distance/meterconv/speed*3600.0
+                    edgedict = {'weight':0,'type':edgetype,'distance':distance,'basetime':basetime,'name':edgename}
+                    FullGraph.add_edge(str(feature.geometry.coordinates[counter]),str(feature.geometry.coordinates[counter-1]),edgedict)
+
+            #add directed edges and associated nodes for feature element (opposite direction of edges within if statement)
             for latlon in feature.geometry.coordinates:
-                FullGraph.add_node(str(latlon),lon =latlon[0] ,lat =latlon[1])
-            for counter in range(len(feature.geometry.coordinates)-1,0,-1):
+                FullGraph.add_node(str(latlon),lon =latlon[0] ,lat =latlon[1],usage = 0)
+            for counter in range(0,len(feature.geometry.coordinates)-1):
                 #find distance between node pair
-                distance = meterconv*latlondist(feature.geometry.coordinates[counter],feature.geometry.coordinates[counter-1]).miles
-                #add edge with edge properties
+                distance = meterconv*latlondist(feature.geometry.coordinates[counter],feature.geometry.coordinates[counter+1]).miles
+                #add edge with distance weight
                 basetime = distance/meterconv/speed*3600.0
                 edgedict = {'weight':0,'type':edgetype,'distance':distance,'basetime':basetime,'name':edgename}
-                FullGraph.add_edge(str(feature.geometry.coordinates[counter]),str(feature.geometry.coordinates[counter-1]),edgedict)
-
-        #add directed edges and associated nodes for feature element (opposite direction of edges within if statement)
-        for latlon in feature.geometry.coordinates:
-            FullGraph.add_node(str(latlon),lon =latlon[0] ,lat =latlon[1])
-        for counter in range(0,len(feature.geometry.coordinates)-1):
-            #find distance between node pair
-            distance = meterconv*latlondist(feature.geometry.coordinates[counter],feature.geometry.coordinates[counter+1]).miles
-            #add edge with distance weight
-            basetime = distance/meterconv/speed*3600.0
-            edgedict = {'weight':0,'type':edgetype,'distance':distance,'basetime':basetime,'name':edgename}
-            FullGraph.add_edge(str(feature.geometry.coordinates[counter]),str(feature.geometry.coordinates[counter+1]),edgedict)
+                FullGraph.add_edge(str(feature.geometry.coordinates[counter]),str(feature.geometry.coordinates[counter+1]),edgedict)
 
 print('Number of Edges',len(FullGraph.edges()))
 # Save FullGraph

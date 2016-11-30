@@ -29,18 +29,19 @@ print('Number of Graph Edges',len(G.edges()))
 
 # Set Network Edge Weights
 
-for edgetuple in G.edges():
-    G[edgetuple[0]][edgetuple[1]]['weight'] = G[edgetuple[0]][edgetuple[1]]['basetime']
+# for edgetuple in G.edges():
+#     G[edgetuple[0]][edgetuple[1]]['weight'] = G[edgetuple[0]][edgetuple[1]]['basetime']
 
 # Find k Unique Routes
 
 k = 5
+distancelimit = 3
 
 lons = nx.get_node_attributes(G,'lon')
 lats = nx.get_node_attributes(G,'lat')
 
 nodesdist = 0
-while(nodesdist < 3):
+while(nodesdist < distancelimit):
     randomnodes = [choice(G.nodes()),choice(G.nodes())]
     origin = randomnodes[0]
     destination = randomnodes[1]

@@ -11,7 +11,7 @@ from geopy.distance import vincenty as latlondist
 
 with open('road data.geojson', 'r') as myfile:
     geoJSONstring=myfile.read().replace('\n', '')
-with open('roadspeeds.geojson', 'r') as myfile:
+with open('cstat_map.geojson', 'r') as myfile:
     geoJSONstring2=myfile.read().replace('\n', '')
 
 # Load geoJSON strings into geojson objects
