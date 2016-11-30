@@ -8,11 +8,11 @@ G1 = nx.DiGraph()
 
 nodes = ['A','B','C','D']
 
-G1.add_edge('A','B',weight = 0,traffic= 1, time = 5, distance = 1)
-G1.add_edge('B','C',weight = 0,traffic= 1, time = 5, distance = 5)
-G1.add_edge('D','C',weight = 0,traffic= 5, time = 1, distance = 1)
-G1.add_edge('B','D',weight = 0,traffic= 5, time = 5, distance = 1)
-G1.add_edge('A','D',weight = 0,traffic= 5, time = 1, distance = 5)
+G1.add_edge('A','B',weight = 0,traffic= 5, time = 8, distance = 2)
+G1.add_edge('B','C',weight = 0,traffic= 2, time = 6, distance = 2)
+G1.add_edge('D','C',weight = 0,traffic= 4, time = 6, distance = 6)
+G1.add_edge('D','B',weight = 0,traffic= 1, time = 5, distance = 2)
+G1.add_edge('A','D',weight = 0,traffic= 2, time = 4, distance = 2)
 
 edges = G1.edges()
 
@@ -32,7 +32,7 @@ print(path)
 
 # Weighted for traffic
 
-weights = [1,100,100]
+weights = [5,1,1]
 
 for edge in edges:
     edge_dictionary = G1.get_edge_data(*edge)
@@ -46,7 +46,7 @@ print(path)
 
 # Weighted for time
 
-weights = [20,1,20]
+weights = [1,5,1]
 
 for edge in edges:
     edge_dictionary = G1.get_edge_data(*edge)
@@ -59,7 +59,7 @@ print(path)
 
 # Weighted for distance
 
-weights = [20,20,1]
+weights = [1,1,5]
 
 for edge in edges:
     edge_dictionary = G1.get_edge_data(*edge)
