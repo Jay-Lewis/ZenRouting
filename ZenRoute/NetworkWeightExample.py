@@ -1,7 +1,7 @@
 __author__ = 'Justin'
 
 import networkx as nx
-import math
+import matplotlib.pyplot as plt
 from WeightFunction import zen_score
 
 G1 = nx.DiGraph()
@@ -16,6 +16,10 @@ G1.add_edge('A','D',weight = 0,traffic= 5, time = 1, distance = 5)
 
 edges = G1.edges()
 
+nx.draw_networkx(G1)
+plt.draw()
+plt.show()
+
 # Equal Weights
 
 weights = [1,1,1]
@@ -28,7 +32,7 @@ for edge in edges:
 
 path = nx.shortest_path(G1,'A','C',weight = 'weight')
 
-print(path)
+print('Equal Weights',path)
 
 # Weighted for traffic
 
@@ -42,7 +46,7 @@ for edge in edges:
 
 path = nx.shortest_path(G1,'A','C',weight = 'weight')
 
-print(path)
+print('Weighted for Traffic',path)
 
 # Weighted for time
 
@@ -55,7 +59,7 @@ for edge in edges:
 
 path = nx.shortest_path(G1,'A','C',weight = 'weight')
 
-print(path)
+print('Weighted for Time',path)
 
 # Weighted for distance
 
@@ -68,4 +72,4 @@ for edge in edges:
 
 path = nx.shortest_path(G1,'A','C',weight = 'weight')
 
-print(path)
+print('Weighted for Distance',path)
