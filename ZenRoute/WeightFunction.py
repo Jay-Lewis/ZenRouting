@@ -1,12 +1,12 @@
 __author__ = 'Pablo'
 
 # DESCRIPTION:
-# The function takes a dictionary ("edge_dictionary") and a list ("weights") as inputs. It then appends the desired values
-# from the dictionary into a list ("values") and multiplies and adds it with the "weights" list to get a "zen score"
+# This script takes a dictionary ("edge_dictionary"), keys of interest, and a list ("weights") as inputs. It then generates
+# a weighted sum of the values of interest.
 #
 
-def zen_score(weights,edge_dictionary):
-    keys = ['traffic','time','distance']   #define the keys to be looked for in the dictionary
+def weightfunction(weights,edge_dictionary,keys):
+
     values=[]    #empty values list
 
     for key in keys:         #append the values from dictionary into the 'values' list
