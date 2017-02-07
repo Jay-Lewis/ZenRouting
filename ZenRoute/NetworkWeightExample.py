@@ -33,7 +33,7 @@ for edge in edges:
     edge_dictionary = G1.get_edge_data(*edge)
     G1[edge[0]][edge[1]]['weight'] =  weightfunction(weights,edge_dictionary,keys)
     # print(edge)
-    print(G1[edge[0]][edge[1]]['weight'])
+    #print(G1[edge[0]][edge[1]]['weight'])
 
 path = nx.shortest_path(G1,'A','C',weight = 'weight')
 
@@ -47,7 +47,7 @@ for edge in edges:
     edge_dictionary = G1.get_edge_data(*edge)
     G1[edge[0]][edge[1]]['weight'] =  weightfunction(weights,edge_dictionary,keys)
     # print(edge)
-    print(G1[edge[0]][edge[1]]['weight'])
+    #print(G1[edge[0]][edge[1]]['weight'])
 
 path = nx.shortest_path(G1,'A','C',weight = 'weight')
 
@@ -60,7 +60,7 @@ weights = [1,5,1]
 for edge in edges:
     edge_dictionary = G1.get_edge_data(*edge)
     G1[edge[0]][edge[1]]['weight'] =  weightfunction(weights,edge_dictionary,keys)
-    print(G1[edge[0]][edge[1]]['weight'])
+    #print(G1[edge[0]][edge[1]]['weight'])
 
 path = nx.shortest_path(G1,'A','C',weight = 'weight')
 
@@ -73,7 +73,7 @@ weights = [1,1,5]
 for edge in edges:
     edge_dictionary = G1.get_edge_data(*edge)
     G1[edge[0]][edge[1]]['weight'] =  weightfunction(weights,edge_dictionary,keys)
-    print(G1[edge[0]][edge[1]]['weight'])
+    #print(G1[edge[0]][edge[1]]['weight'])
 
 path = nx.shortest_path(G1,'A','C',weight = 'weight')
 
