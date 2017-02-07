@@ -1,0 +1,2217 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf version="1.1" xmlns="http://www.gexf.net/1.1draft" xmlns:viz="http://www.gexf.net/1.1draft/viz" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3.org/2001/XMLSchema-instance">
+  <graph defaultedgetype="directed" mode="static">
+    <attributes class="edge" mode="static">
+      <attribute id="3" title="distance" type="double" />
+      <attribute id="4" title="basetime" type="double" />
+      <attribute id="5" title="name" type="string" />
+    </attributes>
+    <attributes class="node" mode="static">
+      <attribute id="0" title="usage" type="integer" />
+      <attribute id="1" title="lat" type="double" />
+      <attribute id="2" title="lon" type="double" />
+    </attributes>
+    <nodes>
+      <node id="[-96.339787, 30.631959]" label="[-96.339787, 30.631959]">
+        <attvalues>
+          <attvalue for="0" value="151" />
+          <attvalue for="1" value="30.631959" />
+          <attvalue for="2" value="-96.339787" />
+        </attvalues>
+      </node>
+      <node id="[-96.3718024, 30.6104267]" label="[-96.3718024, 30.6104267]">
+        <attvalues>
+          <attvalue for="0" value="154" />
+          <attvalue for="1" value="30.6104267" />
+          <attvalue for="2" value="-96.3718024" />
+        </attvalues>
+      </node>
+      <node id="[-96.346349, 30.637525]" label="[-96.346349, 30.637525]">
+        <attvalues>
+          <attvalue for="0" value="131" />
+          <attvalue for="1" value="30.637525" />
+          <attvalue for="2" value="-96.346349" />
+        </attvalues>
+      </node>
+      <node id="[-96.3613522, 30.6507206]" label="[-96.3613522, 30.6507206]">
+        <attvalues>
+          <attvalue for="0" value="132" />
+          <attvalue for="1" value="30.6507206" />
+          <attvalue for="2" value="-96.3613522" />
+        </attvalues>
+      </node>
+      <node id="[-96.307677, 30.636541]" label="[-96.307677, 30.636541]">
+        <attvalues>
+          <attvalue for="0" value="116" />
+          <attvalue for="1" value="30.636541" />
+          <attvalue for="2" value="-96.307677" />
+        </attvalues>
+      </node>
+      <node id="[-96.359818, 30.695939]" label="[-96.359818, 30.695939]">
+        <attvalues>
+          <attvalue for="0" value="143" />
+          <attvalue for="1" value="30.695939" />
+          <attvalue for="2" value="-96.359818" />
+        </attvalues>
+      </node>
+      <node id="[-96.3403774, 30.5865748]" label="[-96.3403774, 30.5865748]">
+        <attvalues>
+          <attvalue for="0" value="123" />
+          <attvalue for="1" value="30.5865748" />
+          <attvalue for="2" value="-96.3403774" />
+        </attvalues>
+      </node>
+      <node id="[-96.365049, 30.692757]" label="[-96.365049, 30.692757]">
+        <attvalues>
+          <attvalue for="0" value="132" />
+          <attvalue for="1" value="30.692757" />
+          <attvalue for="2" value="-96.365049" />
+        </attvalues>
+      </node>
+      <node id="[-96.308596, 30.6415032]" label="[-96.308596, 30.6415032]">
+        <attvalues>
+          <attvalue for="0" value="108" />
+          <attvalue for="1" value="30.6415032" />
+          <attvalue for="2" value="-96.308596" />
+        </attvalues>
+      </node>
+      <node id="[-96.2903601, 30.6018243]" label="[-96.2903601, 30.6018243]">
+        <attvalues>
+          <attvalue for="0" value="106" />
+          <attvalue for="1" value="30.6018243" />
+          <attvalue for="2" value="-96.2903601" />
+        </attvalues>
+      </node>
+      <node id="[-96.3002976, 30.6268285]" label="[-96.3002976, 30.6268285]">
+        <attvalues>
+          <attvalue for="0" value="151" />
+          <attvalue for="1" value="30.6268285" />
+          <attvalue for="2" value="-96.3002976" />
+        </attvalues>
+      </node>
+      <node id="[-96.3769395, 30.6251075]" label="[-96.3769395, 30.6251075]">
+        <attvalues>
+          <attvalue for="0" value="130" />
+          <attvalue for="1" value="30.6251075" />
+          <attvalue for="2" value="-96.3769395" />
+        </attvalues>
+      </node>
+      <node id="[-96.3348693, 30.6279069]" label="[-96.3348693, 30.6279069]">
+        <attvalues>
+          <attvalue for="0" value="112" />
+          <attvalue for="1" value="30.6279069" />
+          <attvalue for="2" value="-96.3348693" />
+        </attvalues>
+      </node>
+      <node id="[-96.3420062, 30.6338352]" label="[-96.3420062, 30.6338352]">
+        <attvalues>
+          <attvalue for="0" value="142" />
+          <attvalue for="1" value="30.6338352" />
+          <attvalue for="2" value="-96.3420062" />
+        </attvalues>
+      </node>
+      <node id="[-96.3114207, 30.6396856]" label="[-96.3114207, 30.6396856]">
+        <attvalues>
+          <attvalue for="0" value="143" />
+          <attvalue for="1" value="30.6396856" />
+          <attvalue for="2" value="-96.3114207" />
+        </attvalues>
+      </node>
+      <node id="[-96.3564319, 30.6460865]" label="[-96.3564319, 30.6460865]">
+        <attvalues>
+          <attvalue for="0" value="122" />
+          <attvalue for="1" value="30.6460865" />
+          <attvalue for="2" value="-96.3564319" />
+        </attvalues>
+      </node>
+      <node id="[-96.3264505, 30.6641996]" label="[-96.3264505, 30.6641996]">
+        <attvalues>
+          <attvalue for="0" value="164" />
+          <attvalue for="1" value="30.6641996" />
+          <attvalue for="2" value="-96.3264505" />
+        </attvalues>
+      </node>
+      <node id="[-96.299988, 30.62569]" label="[-96.299988, 30.62569]">
+        <attvalues>
+          <attvalue for="0" value="123" />
+          <attvalue for="1" value="30.62569" />
+          <attvalue for="2" value="-96.299988" />
+        </attvalues>
+      </node>
+      <node id="[-96.308689, 30.6416045]" label="[-96.308689, 30.6416045]">
+        <attvalues>
+          <attvalue for="0" value="102" />
+          <attvalue for="1" value="30.6416045" />
+          <attvalue for="2" value="-96.308689" />
+        </attvalues>
+      </node>
+      <node id="[-96.3501829, 30.6407811]" label="[-96.3501829, 30.6407811]">
+        <attvalues>
+          <attvalue for="0" value="146" />
+          <attvalue for="1" value="30.6407811" />
+          <attvalue for="2" value="-96.3501829" />
+        </attvalues>
+      </node>
+      <node id="[-96.3438366, 30.635396]" label="[-96.3438366, 30.635396]">
+        <attvalues>
+          <attvalue for="0" value="142" />
+          <attvalue for="1" value="30.635396" />
+          <attvalue for="2" value="-96.3438366" />
+        </attvalues>
+      </node>
+      <node id="[-96.372818, 30.6636674]" label="[-96.372818, 30.6636674]">
+        <attvalues>
+          <attvalue for="0" value="106" />
+          <attvalue for="1" value="30.6636674" />
+          <attvalue for="2" value="-96.372818" />
+        </attvalues>
+      </node>
+      <node id="[-96.3098702, 30.6403824]" label="[-96.3098702, 30.6403824]">
+        <attvalues>
+          <attvalue for="0" value="124" />
+          <attvalue for="1" value="30.6403824" />
+          <attvalue for="2" value="-96.3098702" />
+        </attvalues>
+      </node>
+      <node id="[-96.3502939, 30.6408777]" label="[-96.3502939, 30.6408777]">
+        <attvalues>
+          <attvalue for="0" value="147" />
+          <attvalue for="1" value="30.6408777" />
+          <attvalue for="2" value="-96.3502939" />
+        </attvalues>
+      </node>
+      <node id="[-96.3554062, 30.6452205]" label="[-96.3554062, 30.6452205]">
+        <attvalues>
+          <attvalue for="0" value="125" />
+          <attvalue for="1" value="30.6452205" />
+          <attvalue for="2" value="-96.3554062" />
+        </attvalues>
+      </node>
+      <node id="[-96.3767753, 30.6202118]" label="[-96.3767753, 30.6202118]">
+        <attvalues>
+          <attvalue for="0" value="128" />
+          <attvalue for="1" value="30.6202118" />
+          <attvalue for="2" value="-96.3767753" />
+        </attvalues>
+      </node>
+      <node id="[-96.3115318, 30.6397979]" label="[-96.3115318, 30.6397979]">
+        <attvalues>
+          <attvalue for="0" value="139" />
+          <attvalue for="1" value="30.6397979" />
+          <attvalue for="2" value="-96.3115318" />
+        </attvalues>
+      </node>
+      <node id="[-96.3503707, 30.6873698]" label="[-96.3503707, 30.6873698]">
+        <attvalues>
+          <attvalue for="0" value="109" />
+          <attvalue for="1" value="30.6873698" />
+          <attvalue for="2" value="-96.3503707" />
+        </attvalues>
+      </node>
+      <node id="[-96.2740047, 30.5726605]" label="[-96.2740047, 30.5726605]">
+        <attvalues>
+          <attvalue for="0" value="102" />
+          <attvalue for="1" value="30.5726605" />
+          <attvalue for="2" value="-96.2740047" />
+        </attvalues>
+      </node>
+      <node id="[-96.3662719, 30.6555348]" label="[-96.3662719, 30.6555348]">
+        <attvalues>
+          <attvalue for="0" value="129" />
+          <attvalue for="1" value="30.6555348" />
+          <attvalue for="2" value="-96.3662719" />
+        </attvalues>
+      </node>
+      <node id="[-96.364744, 30.6031941]" label="[-96.364744, 30.6031941]">
+        <attvalues>
+          <attvalue for="0" value="123" />
+          <attvalue for="1" value="30.6031941" />
+          <attvalue for="2" value="-96.364744" />
+        </attvalues>
+      </node>
+      <node id="[-96.3607383, 30.6953704]" label="[-96.3607383, 30.6953704]">
+        <attvalues>
+          <attvalue for="0" value="132" />
+          <attvalue for="1" value="30.6953704" />
+          <attvalue for="2" value="-96.3607383" />
+        </attvalues>
+      </node>
+      <node id="[-96.3484318, 30.6392907]" label="[-96.3484318, 30.6392907]">
+        <attvalues>
+          <attvalue for="0" value="168" />
+          <attvalue for="1" value="30.6392907" />
+          <attvalue for="2" value="-96.3484318" />
+        </attvalues>
+      </node>
+      <node id="[-96.3431888, 30.5864079]" label="[-96.3431888, 30.5864079]">
+        <attvalues>
+          <attvalue for="0" value="120" />
+          <attvalue for="1" value="30.5864079" />
+          <attvalue for="2" value="-96.3431888" />
+        </attvalues>
+      </node>
+      <node id="[-96.348615, 30.588167]" label="[-96.348615, 30.588167]">
+        <attvalues>
+          <attvalue for="0" value="121" />
+          <attvalue for="1" value="30.588167" />
+          <attvalue for="2" value="-96.348615" />
+        </attvalues>
+      </node>
+      <node id="[-96.2792, 30.57705]" label="[-96.2792, 30.57705]">
+        <attvalues>
+          <attvalue for="0" value="105" />
+          <attvalue for="1" value="30.57705" />
+          <attvalue for="2" value="-96.2792" />
+        </attvalues>
+      </node>
+      <node id="[-96.3769964, 30.6209936]" label="[-96.3769964, 30.6209936]">
+        <attvalues>
+          <attvalue for="0" value="128" />
+          <attvalue for="1" value="30.6209936" />
+          <attvalue for="2" value="-96.3769964" />
+        </attvalues>
+      </node>
+      <node id="[-96.3715643, 30.6606871]" label="[-96.3715643, 30.6606871]">
+        <attvalues>
+          <attvalue for="0" value="122" />
+          <attvalue for="1" value="30.6606871" />
+          <attvalue for="2" value="-96.3715643" />
+        </attvalues>
+      </node>
+      <node id="[-96.290502, 30.596039]" label="[-96.290502, 30.596039]">
+        <attvalues>
+          <attvalue for="0" value="106" />
+          <attvalue for="1" value="30.596039" />
+          <attvalue for="2" value="-96.290502" />
+        </attvalues>
+      </node>
+      <node id="[-96.3134522, 30.6447703]" label="[-96.3134522, 30.6447703]">
+        <attvalues>
+          <attvalue for="0" value="122" />
+          <attvalue for="1" value="30.6447703" />
+          <attvalue for="2" value="-96.3134522" />
+        </attvalues>
+      </node>
+      <node id="[-96.3628244, 30.6523126]" label="[-96.3628244, 30.6523126]">
+        <attvalues>
+          <attvalue for="0" value="130" />
+          <attvalue for="1" value="30.6523126" />
+          <attvalue for="2" value="-96.3628244" />
+        </attvalues>
+      </node>
+      <node id="[-96.373683, 30.665961]" label="[-96.373683, 30.665961]">
+        <attvalues>
+          <attvalue for="0" value="101" />
+          <attvalue for="1" value="30.665961" />
+          <attvalue for="2" value="-96.373683" />
+        </attvalues>
+      </node>
+      <node id="[-96.2737188, 30.5724452]" label="[-96.2737188, 30.5724452]">
+        <attvalues>
+          <attvalue for="0" value="121" />
+          <attvalue for="1" value="30.5724452" />
+          <attvalue for="2" value="-96.2737188" />
+        </attvalues>
+      </node>
+      <node id="[-96.290293, 30.607658]" label="[-96.290293, 30.607658]">
+        <attvalues>
+          <attvalue for="0" value="112" />
+          <attvalue for="1" value="30.607658" />
+          <attvalue for="2" value="-96.290293" />
+        </attvalues>
+      </node>
+      <node id="[-96.3404067, 30.586573]" label="[-96.3404067, 30.586573]">
+        <attvalues>
+          <attvalue for="0" value="122" />
+          <attvalue for="1" value="30.586573" />
+          <attvalue for="2" value="-96.3404067" />
+        </attvalues>
+      </node>
+      <node id="[-96.3544099, 30.6443646]" label="[-96.3544099, 30.6443646]">
+        <attvalues>
+          <attvalue for="0" value="135" />
+          <attvalue for="1" value="30.6443646" />
+          <attvalue for="2" value="-96.3544099" />
+        </attvalues>
+      </node>
+      <node id="[-96.3483898, 30.6392546]" label="[-96.3483898, 30.6392546]">
+        <attvalues>
+          <attvalue for="0" value="167" />
+          <attvalue for="1" value="30.6392546" />
+          <attvalue for="2" value="-96.3483898" />
+        </attvalues>
+      </node>
+      <node id="[-96.338278, 30.63065]" label="[-96.338278, 30.63065]">
+        <attvalues>
+          <attvalue for="0" value="156" />
+          <attvalue for="1" value="30.63065" />
+          <attvalue for="2" value="-96.338278" />
+        </attvalues>
+      </node>
+      <node id="[-96.3767065, 30.6259054]" label="[-96.3767065, 30.6259054]">
+        <attvalues>
+          <attvalue for="0" value="113" />
+          <attvalue for="1" value="30.6259054" />
+          <attvalue for="2" value="-96.3767065" />
+        </attvalues>
+      </node>
+      <node id="[-96.3430734, 30.6347492]" label="[-96.3430734, 30.6347492]">
+        <attvalues>
+          <attvalue for="0" value="144" />
+          <attvalue for="1" value="30.6347492" />
+          <attvalue for="2" value="-96.3430734" />
+        </attvalues>
+      </node>
+      <node id="[-96.289902, 30.607277]" label="[-96.289902, 30.607277]">
+        <attvalues>
+          <attvalue for="0" value="150" />
+          <attvalue for="1" value="30.607277" />
+          <attvalue for="2" value="-96.289902" />
+        </attvalues>
+      </node>
+      <node id="[-96.3037885, 30.6318194]" label="[-96.3037885, 30.6318194]">
+        <attvalues>
+          <attvalue for="0" value="124" />
+          <attvalue for="1" value="30.6318194" />
+          <attvalue for="2" value="-96.3037885" />
+        </attvalues>
+      </node>
+      <node id="[-96.3574599, 30.646949]" label="[-96.3574599, 30.646949]">
+        <attvalues>
+          <attvalue for="0" value="122" />
+          <attvalue for="1" value="30.646949" />
+          <attvalue for="2" value="-96.3574599" />
+        </attvalues>
+      </node>
+      <node id="[-96.3639047, 30.6533548]" label="[-96.3639047, 30.6533548]">
+        <attvalues>
+          <attvalue for="0" value="130" />
+          <attvalue for="1" value="30.6533548" />
+          <attvalue for="2" value="-96.3639047" />
+        </attvalues>
+      </node>
+      <node id="[-96.2857357, 30.5844994]" label="[-96.2857357, 30.5844994]">
+        <attvalues>
+          <attvalue for="0" value="160" />
+          <attvalue for="1" value="30.5844994" />
+          <attvalue for="2" value="-96.2857357" />
+        </attvalues>
+      </node>
+      <node id="[-96.367, 30.6915549]" label="[-96.367, 30.6915549]">
+        <attvalues>
+          <attvalue for="0" value="134" />
+          <attvalue for="1" value="30.6915549" />
+          <attvalue for="2" value="-96.367" />
+        </attvalues>
+      </node>
+      <node id="[-96.2735748, 30.5723308]" label="[-96.2735748, 30.5723308]">
+        <attvalues>
+          <attvalue for="0" value="121" />
+          <attvalue for="1" value="30.5723308" />
+          <attvalue for="2" value="-96.2735748" />
+        </attvalues>
+      </node>
+      <node id="[-96.366405, 30.691913]" label="[-96.366405, 30.691913]">
+        <attvalues>
+          <attvalue for="0" value="132" />
+          <attvalue for="1" value="30.691913" />
+          <attvalue for="2" value="-96.366405" />
+        </attvalues>
+      </node>
+      <node id="[-96.292607, 30.614057]" label="[-96.292607, 30.614057]">
+        <attvalues>
+          <attvalue for="0" value="112" />
+          <attvalue for="1" value="30.614057" />
+          <attvalue for="2" value="-96.292607" />
+        </attvalues>
+      </node>
+      <node id="[-96.342129, 30.633947]" label="[-96.342129, 30.633947]">
+        <attvalues>
+          <attvalue for="0" value="147" />
+          <attvalue for="1" value="30.633947" />
+          <attvalue for="2" value="-96.342129" />
+        </attvalues>
+      </node>
+      <node id="[-96.35342, 30.643594]" label="[-96.35342, 30.643594]">
+        <attvalues>
+          <attvalue for="0" value="177" />
+          <attvalue for="1" value="30.643594" />
+          <attvalue for="2" value="-96.35342" />
+        </attvalues>
+      </node>
+      <node id="[-96.287751, 30.590223]" label="[-96.287751, 30.590223]">
+        <attvalues>
+          <attvalue for="0" value="156" />
+          <attvalue for="1" value="30.590223" />
+          <attvalue for="2" value="-96.287751" />
+        </attvalues>
+      </node>
+      <node id="[-96.363829, 30.693478]" label="[-96.363829, 30.693478]">
+        <attvalues>
+          <attvalue for="0" value="132" />
+          <attvalue for="1" value="30.693478" />
+          <attvalue for="2" value="-96.363829" />
+        </attvalues>
+      </node>
+      <node id="[-96.2808008, 30.579342]" label="[-96.2808008, 30.579342]">
+        <attvalues>
+          <attvalue for="0" value="105" />
+          <attvalue for="1" value="30.579342" />
+          <attvalue for="2" value="-96.2808008" />
+        </attvalues>
+      </node>
+      <node id="[-96.308594, 30.63753]" label="[-96.308594, 30.63753]">
+        <attvalues>
+          <attvalue for="0" value="111" />
+          <attvalue for="1" value="30.63753" />
+          <attvalue for="2" value="-96.308594" />
+        </attvalues>
+      </node>
+      <node id="[-96.28958, 30.5948999]" label="[-96.28958, 30.5948999]">
+        <attvalues>
+          <attvalue for="0" value="155" />
+          <attvalue for="1" value="30.5948999" />
+          <attvalue for="2" value="-96.28958" />
+        </attvalues>
+      </node>
+      <node id="[-96.3542336, 30.5920626]" label="[-96.3542336, 30.5920626]">
+        <attvalues>
+          <attvalue for="0" value="137" />
+          <attvalue for="1" value="30.5920626" />
+          <attvalue for="2" value="-96.3542336" />
+        </attvalues>
+      </node>
+      <node id="[-96.3624444, 30.6518988]" label="[-96.3624444, 30.6518988]">
+        <attvalues>
+          <attvalue for="0" value="133" />
+          <attvalue for="1" value="30.6518988" />
+          <attvalue for="2" value="-96.3624444" />
+        </attvalues>
+      </node>
+      <node id="[-96.3349726, 30.6278084]" label="[-96.3349726, 30.6278084]">
+        <attvalues>
+          <attvalue for="0" value="119" />
+          <attvalue for="1" value="30.6278084" />
+          <attvalue for="2" value="-96.3349726" />
+        </attvalues>
+      </node>
+      <node id="[-96.363419, 30.6011812]" label="[-96.363419, 30.6011812]">
+        <attvalues>
+          <attvalue for="0" value="124" />
+          <attvalue for="1" value="30.6011812" />
+          <attvalue for="2" value="-96.363419" />
+        </attvalues>
+      </node>
+      <node id="[-96.3726011, 30.6621002]" label="[-96.3726011, 30.6621002]">
+        <attvalues>
+          <attvalue for="0" value="107" />
+          <attvalue for="1" value="30.6621002" />
+          <attvalue for="2" value="-96.3726011" />
+        </attvalues>
+      </node>
+      <node id="[-96.3491649, 30.6399241]" label="[-96.3491649, 30.6399241]">
+        <attvalues>
+          <attvalue for="0" value="148" />
+          <attvalue for="1" value="30.6399241" />
+          <attvalue for="2" value="-96.3491649" />
+        </attvalues>
+      </node>
+      <node id="[-96.3721976, 30.660389]" label="[-96.3721976, 30.660389]">
+        <attvalues>
+          <attvalue for="0" value="110" />
+          <attvalue for="1" value="30.660389" />
+          <attvalue for="2" value="-96.3721976" />
+        </attvalues>
+      </node>
+      <node id="[-96.3432496, 30.5864016]" label="[-96.3432496, 30.5864016]">
+        <attvalues>
+          <attvalue for="0" value="113" />
+          <attvalue for="1" value="30.5864016" />
+          <attvalue for="2" value="-96.3432496" />
+        </attvalues>
+      </node>
+      <node id="[-96.287239, 30.583729]" label="[-96.287239, 30.583729]">
+        <attvalues>
+          <attvalue for="0" value="146" />
+          <attvalue for="1" value="30.583729" />
+          <attvalue for="2" value="-96.287239" />
+        </attvalues>
+      </node>
+      <node id="[-96.3468977, 30.6379898]" label="[-96.3468977, 30.6379898]">
+        <attvalues>
+          <attvalue for="0" value="126" />
+          <attvalue for="1" value="30.6379898" />
+          <attvalue for="2" value="-96.3468977" />
+        </attvalues>
+      </node>
+      <node id="[-96.3674841, 30.6912669]" label="[-96.3674841, 30.6912669]">
+        <attvalues>
+          <attvalue for="0" value="134" />
+          <attvalue for="1" value="30.6912669" />
+          <attvalue for="2" value="-96.3674841" />
+        </attvalues>
+      </node>
+      <node id="[-96.344785, 30.636197]" label="[-96.344785, 30.636197]">
+        <attvalues>
+          <attvalue for="0" value="145" />
+          <attvalue for="1" value="30.636197" />
+          <attvalue for="2" value="-96.344785" />
+        </attvalues>
+      </node>
+      <node id="[-96.360101, 30.695765]" label="[-96.360101, 30.695765]">
+        <attvalues>
+          <attvalue for="0" value="133" />
+          <attvalue for="1" value="30.695765" />
+          <attvalue for="2" value="-96.360101" />
+        </attvalues>
+      </node>
+      <node id="[-96.328623, 30.662276]" label="[-96.328623, 30.662276]">
+        <attvalues>
+          <attvalue for="0" value="198" />
+          <attvalue for="1" value="30.662276" />
+          <attvalue for="2" value="-96.328623" />
+        </attvalues>
+      </node>
+      <node id="[-96.331365, 30.666722]" label="[-96.331365, 30.666722]">
+        <attvalues>
+          <attvalue for="0" value="103" />
+          <attvalue for="1" value="30.666722" />
+          <attvalue for="2" value="-96.331365" />
+        </attvalues>
+      </node>
+      <node id="[-96.2849847, 30.5788992]" label="[-96.2849847, 30.5788992]">
+        <attvalues>
+          <attvalue for="0" value="124" />
+          <attvalue for="1" value="30.5788992" />
+          <attvalue for="2" value="-96.2849847" />
+        </attvalues>
+      </node>
+      <node id="[-96.360192, 30.649556]" label="[-96.360192, 30.649556]">
+        <attvalues>
+          <attvalue for="0" value="118" />
+          <attvalue for="1" value="30.649556" />
+          <attvalue for="2" value="-96.360192" />
+        </attvalues>
+      </node>
+      <node id="[-96.336498, 30.629166]" label="[-96.336498, 30.629166]">
+        <attvalues>
+          <attvalue for="0" value="153" />
+          <attvalue for="1" value="30.629166" />
+          <attvalue for="2" value="-96.336498" />
+        </attvalues>
+      </node>
+      <node id="[-96.3402559, 30.5865823]" label="[-96.3402559, 30.5865823]">
+        <attvalues>
+          <attvalue for="0" value="122" />
+          <attvalue for="1" value="30.5865823" />
+          <attvalue for="2" value="-96.3402559" />
+        </attvalues>
+      </node>
+      <node id="[-96.3637335, 30.653189]" label="[-96.3637335, 30.653189]">
+        <attvalues>
+          <attvalue for="0" value="131" />
+          <attvalue for="1" value="30.653189" />
+          <attvalue for="2" value="-96.3637335" />
+        </attvalues>
+      </node>
+      <node id="[-96.3506911, 30.6412123]" label="[-96.3506911, 30.6412123]">
+        <attvalues>
+          <attvalue for="0" value="140" />
+          <attvalue for="1" value="30.6412123" />
+          <attvalue for="2" value="-96.3506911" />
+        </attvalues>
+      </node>
+      <node id="[-96.3772871, 30.6233431]" label="[-96.3772871, 30.6233431]">
+        <attvalues>
+          <attvalue for="0" value="128" />
+          <attvalue for="1" value="30.6233431" />
+          <attvalue for="2" value="-96.3772871" />
+        </attvalues>
+      </node>
+      <node id="[-96.3589785, 30.6482863]" label="[-96.3589785, 30.6482863]">
+        <attvalues>
+          <attvalue for="0" value="120" />
+          <attvalue for="1" value="30.6482863" />
+          <attvalue for="2" value="-96.3589785" />
+        </attvalues>
+      </node>
+      <node id="[-96.2896195, 30.5951993]" label="[-96.2896195, 30.5951993]">
+        <attvalues>
+          <attvalue for="0" value="153" />
+          <attvalue for="1" value="30.5951993" />
+          <attvalue for="2" value="-96.2896195" />
+        </attvalues>
+      </node>
+      <node id="[-96.3763715, 30.6191468]" label="[-96.3763715, 30.6191468]">
+        <attvalues>
+          <attvalue for="0" value="137" />
+          <attvalue for="1" value="30.6191468" />
+          <attvalue for="2" value="-96.3763715" />
+        </attvalues>
+      </node>
+      <node id="[-96.3446148, 30.636053]" label="[-96.3446148, 30.636053]">
+        <attvalues>
+          <attvalue for="0" value="143" />
+          <attvalue for="1" value="30.636053" />
+          <attvalue for="2" value="-96.3446148" />
+        </attvalues>
+      </node>
+      <node id="[-96.362223, 30.599495]" label="[-96.362223, 30.599495]">
+        <attvalues>
+          <attvalue for="0" value="144" />
+          <attvalue for="1" value="30.599495" />
+          <attvalue for="2" value="-96.362223" />
+        </attvalues>
+      </node>
+      <node id="[-96.3616637, 30.6947885]" label="[-96.3616637, 30.6947885]">
+        <attvalues>
+          <attvalue for="0" value="132" />
+          <attvalue for="1" value="30.6947885" />
+          <attvalue for="2" value="-96.3616637" />
+        </attvalues>
+      </node>
+      <node id="[-96.2862746, 30.5807472]" label="[-96.2862746, 30.5807472]">
+        <attvalues>
+          <attvalue for="0" value="125" />
+          <attvalue for="1" value="30.5807472" />
+          <attvalue for="2" value="-96.2862746" />
+        </attvalues>
+      </node>
+      <node id="[-96.2896854, 30.5963098]" label="[-96.2896854, 30.5963098]">
+        <attvalues>
+          <attvalue for="0" value="153" />
+          <attvalue for="1" value="30.5963098" />
+          <attvalue for="2" value="-96.2896854" />
+        </attvalues>
+      </node>
+      <node id="[-96.3379713, 30.5867243]" label="[-96.3379713, 30.5867243]">
+        <attvalues>
+          <attvalue for="0" value="157" />
+          <attvalue for="1" value="30.5867243" />
+          <attvalue for="2" value="-96.3379713" />
+        </attvalues>
+      </node>
+      <node id="[-96.294762, 30.6167]" label="[-96.294762, 30.6167]">
+        <attvalues>
+          <attvalue for="0" value="109" />
+          <attvalue for="1" value="30.6167" />
+          <attvalue for="2" value="-96.294762" />
+        </attvalues>
+      </node>
+      <node id="[-96.365174, 30.654499]" label="[-96.365174, 30.654499]">
+        <attvalues>
+          <attvalue for="0" value="129" />
+          <attvalue for="1" value="30.654499" />
+          <attvalue for="2" value="-96.365174" />
+        </attvalues>
+      </node>
+      <node id="[-96.3031371, 30.6313685]" label="[-96.3031371, 30.6313685]">
+        <attvalues>
+          <attvalue for="0" value="151" />
+          <attvalue for="1" value="30.6313685" />
+          <attvalue for="2" value="-96.3031371" />
+        </attvalues>
+      </node>
+      <node id="[-96.334271, 30.6684671]" label="[-96.334271, 30.6684671]">
+        <attvalues>
+          <attvalue for="0" value="104" />
+          <attvalue for="1" value="30.6684671" />
+          <attvalue for="2" value="-96.334271" />
+        </attvalues>
+      </node>
+      <node id="[-96.2925803, 30.6145779]" label="[-96.2925803, 30.6145779]">
+        <attvalues>
+          <attvalue for="0" value="150" />
+          <attvalue for="1" value="30.6145779" />
+          <attvalue for="2" value="-96.2925803" />
+        </attvalues>
+      </node>
+      <node id="[-96.366111, 30.692096]" label="[-96.366111, 30.692096]">
+        <attvalues>
+          <attvalue for="0" value="132" />
+          <attvalue for="1" value="30.692096" />
+          <attvalue for="2" value="-96.366111" />
+        </attvalues>
+      </node>
+      <node id="[-96.2983124, 30.6231096]" label="[-96.2983124, 30.6231096]">
+        <attvalues>
+          <attvalue for="0" value="124" />
+          <attvalue for="1" value="30.6231096" />
+          <attvalue for="2" value="-96.2983124" />
+        </attvalues>
+      </node>
+      <node id="[-96.3432306, 30.5864023]" label="[-96.3432306, 30.5864023]">
+        <attvalues>
+          <attvalue for="0" value="112" />
+          <attvalue for="1" value="30.5864023" />
+          <attvalue for="2" value="-96.3432306" />
+        </attvalues>
+      </node>
+      <node id="[-96.3731946, 30.6661654]" label="[-96.3731946, 30.6661654]">
+        <attvalues>
+          <attvalue for="0" value="122" />
+          <attvalue for="1" value="30.6661654" />
+          <attvalue for="2" value="-96.3731946" />
+        </attvalues>
+      </node>
+      <node id="[-96.3666191, 30.605305]" label="[-96.3666191, 30.605305]">
+        <attvalues>
+          <attvalue for="0" value="113" />
+          <attvalue for="1" value="30.605305" />
+          <attvalue for="2" value="-96.3666191" />
+        </attvalues>
+      </node>
+      <node id="[-96.3276039, 30.6611592]" label="[-96.3276039, 30.6611592]">
+        <attvalues>
+          <attvalue for="0" value="113" />
+          <attvalue for="1" value="30.6611592" />
+          <attvalue for="2" value="-96.3276039" />
+        </attvalues>
+      </node>
+      <node id="[-96.3461664, 30.6373699]" label="[-96.3461664, 30.6373699]">
+        <attvalues>
+          <attvalue for="0" value="141" />
+          <attvalue for="1" value="30.6373699" />
+          <attvalue for="2" value="-96.3461664" />
+        </attvalues>
+      </node>
+      <node id="[-96.370413, 30.6593682]" label="[-96.370413, 30.6593682]">
+        <attvalues>
+          <attvalue for="0" value="128" />
+          <attvalue for="1" value="30.6593682" />
+          <attvalue for="2" value="-96.370413" />
+        </attvalues>
+      </node>
+      <node id="[-96.3693668, 30.6583913]" label="[-96.3693668, 30.6583913]">
+        <attvalues>
+          <attvalue for="0" value="130" />
+          <attvalue for="1" value="30.6583913" />
+          <attvalue for="2" value="-96.3693668" />
+        </attvalues>
+      </node>
+      <node id="[-96.3022115, 30.563699]" label="[-96.3022115, 30.563699]">
+        <attvalues>
+          <attvalue for="0" value="100" />
+          <attvalue for="1" value="30.563699" />
+          <attvalue for="2" value="-96.3022115" />
+        </attvalues>
+      </node>
+      <node id="[-96.2951483, 30.6186656]" label="[-96.2951483, 30.6186656]">
+        <attvalues>
+          <attvalue for="0" value="131" />
+          <attvalue for="1" value="30.6186656" />
+          <attvalue for="2" value="-96.2951483" />
+        </attvalues>
+      </node>
+      <node id="[-96.3453223, 30.636662]" label="[-96.3453223, 30.636662]">
+        <attvalues>
+          <attvalue for="0" value="144" />
+          <attvalue for="1" value="30.636662" />
+          <attvalue for="2" value="-96.3453223" />
+        </attvalues>
+      </node>
+      <node id="[-96.3361274, 30.6288416]" label="[-96.3361274, 30.6288416]">
+        <attvalues>
+          <attvalue for="0" value="151" />
+          <attvalue for="1" value="30.6288416" />
+          <attvalue for="2" value="-96.3361274" />
+        </attvalues>
+      </node>
+      <node id="[-96.3677183, 30.6568932]" label="[-96.3677183, 30.6568932]">
+        <attvalues>
+          <attvalue for="0" value="129" />
+          <attvalue for="1" value="30.6568932" />
+          <attvalue for="2" value="-96.3677183" />
+        </attvalues>
+      </node>
+      <node id="[-96.3518814, 30.6422363]" label="[-96.3518814, 30.6422363]">
+        <attvalues>
+          <attvalue for="0" value="141" />
+          <attvalue for="1" value="30.6422363" />
+          <attvalue for="2" value="-96.3518814" />
+        </attvalues>
+      </node>
+      <node id="[-96.2900565, 30.6008413]" label="[-96.2900565, 30.6008413]">
+        <attvalues>
+          <attvalue for="0" value="116" />
+          <attvalue for="1" value="30.6008413" />
+          <attvalue for="2" value="-96.2900565" />
+        </attvalues>
+      </node>
+      <node id="[-96.295909, 30.6184717]" label="[-96.295909, 30.6184717]">
+        <attvalues>
+          <attvalue for="0" value="147" />
+          <attvalue for="1" value="30.6184717" />
+          <attvalue for="2" value="-96.295909" />
+        </attvalues>
+      </node>
+      <node id="[-96.3747326, 30.6150637]" label="[-96.3747326, 30.6150637]">
+        <attvalues>
+          <attvalue for="0" value="132" />
+          <attvalue for="1" value="30.6150637" />
+          <attvalue for="2" value="-96.3747326" />
+        </attvalues>
+      </node>
+      <node id="[-96.3477047, 30.6386749]" label="[-96.3477047, 30.6386749]">
+        <attvalues>
+          <attvalue for="0" value="126" />
+          <attvalue for="1" value="30.6386749" />
+          <attvalue for="2" value="-96.3477047" />
+        </attvalues>
+      </node>
+      <node id="[-96.3606395, 30.6500027]" label="[-96.3606395, 30.6500027]">
+        <attvalues>
+          <attvalue for="0" value="132" />
+          <attvalue for="1" value="30.6500027" />
+          <attvalue for="2" value="-96.3606395" />
+        </attvalues>
+      </node>
+      <node id="[-96.343905, 30.6354521]" label="[-96.343905, 30.6354521]">
+        <attvalues>
+          <attvalue for="0" value="143" />
+          <attvalue for="1" value="30.6354521" />
+          <attvalue for="2" value="-96.343905" />
+        </attvalues>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="491" source="[-96.339787, 30.631959]" target="[-96.3420062, 30.6338352]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="248.918986612" />
+          <attvalue for="4" value="13.9203978734" />
+          <attvalue for="5" value="Texas Avenue" />
+        </attvalues>
+      </edge>
+      <edge id="492" source="[-96.339787, 30.631959]" target="[-96.338278, 30.63065]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="169.296780565" />
+          <attvalue for="4" value="9.46765281436" />
+          <attvalue for="5" value="Texas Avenue" />
+        </attvalues>
+      </edge>
+      <edge id="8969" source="[-96.3718024, 30.6104267]" target="[-96.3747326, 30.6150637]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="333.290422568" />
+          <attvalue for="4" value="24.8516480679" />
+          <attvalue for="5" value="Harvey Mitchell Parkway South" />
+        </attvalues>
+      </edge>
+      <edge id="8968" source="[-96.3718024, 30.6104267]" target="[-96.3666191, 30.605305]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="582.345106259" />
+          <attvalue for="4" value="43.4222967564" />
+          <attvalue for="5" value="Harvey Mitchell Parkway South" />
+        </attvalues>
+      </edge>
+      <edge id="7963" source="[-96.287751, 30.590223]" target="[-96.28958, 30.5948999]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="213.341891186" />
+          <attvalue for="4" value="15.9077406337" />
+          <attvalue for="5" value="North Earl Rudder Freeway Frontage Road" />
+        </attvalues>
+      </edge>
+      <edge id="13096" source="[-96.346349, 30.637525]" target="[-96.3461664, 30.6373699]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="20.4825383516" />
+          <attvalue for="4" value="1.1454533348" />
+          <attvalue for="5" value="Texas Avenue" />
+        </attvalues>
+      </edge>
+      <edge id="13098" source="[-96.346349, 30.637525]" target="[-96.3468977, 30.6379898]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="61.547036367" />
+          <attvalue for="4" value="3.44191998294" />
+          <attvalue for="5" value="Texas Avenue" />
+        </attvalues>
+      </edge>
+      <edge id="10612" source="[-96.3613522, 30.6507206]" target="[-96.3624444, 30.6518988]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="122.845489825" />
+          <attvalue for="4" value="6.86993836264" />
+          <attvalue for="5" value="Texas Avenue" />
+        </attvalues>
+      </edge>
+      <edge id="10614" source="[-96.3613522, 30.6507206]" target="[-96.3606395, 30.6500027]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="80.0886333009" />
+          <attvalue for="4" value="4.4788292603" />
+          <attvalue for="5" value="Texas Avenue" />
+        </attvalues>
+      </edge>
+      <edge id="499" source="[-96.359818, 30.695939]" target="[-96.360101, 30.695765]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="31.6787082956" />
+          <attvalue for="4" value="1.57473893938" />
+          <attvalue for="5" value="San Jacinto Avenue" />
+        </attvalues>
+      </edge>
+      <edge id="9190" source="[-96.3403774, 30.5865748]" target="[-96.3402559, 30.5865823]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="13.5694608618" />
+          <attvalue for="4" value="1.01180064884" />
+          <attvalue for="5" value="Harvey Mitchell Parkway South" />
+        </attvalues>
+      </edge>
+      <edge id="9192" source="[-96.3403774, 30.5865748]" target="[-96.3404067, 30.586573]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="3.27230546923" />
+          <attvalue for="4" value="0.243997962094" />
+          <attvalue for="5" value="Harvey Mitchell Parkway South" />
+        </attvalues>
+      </edge>
+      <edge id="660" source="[-96.365049, 30.692757]" target="[-96.365049, 30.692757]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="261.830228059" />
+          <attvalue for="4" value="19.5232513167" />
+          <attvalue for="5" value="Maple Drive" />
+        </attvalues>
+      </edge>
+      <edge id="661" source="[-96.365049, 30.692757]" target="[-96.363829, 30.693478]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="136.541842312" />
+          <attvalue for="4" value="6.7874533878" />
+          <attvalue for="5" value="San Jacinto Avenue" />
+        </attvalues>
+      </edge>
+      <edge id="662" source="[-96.365049, 30.692757]" target="[-96.366111, 30.692096]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="118.886380103" />
+          <attvalue for="4" value="5.90980573961" />
+          <attvalue for="5" value="San Jacinto Avenue" />
+        </attvalues>
+      </edge>
+      <edge id="15551" source="[-96.308596, 30.6415032]" target="[-96.308689, 30.6416045]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="10.4604164112" />
+          <attvalue for="4" value="0.779976170005" />
+          <attvalue for="5" value="North Earl Rudder Freeway Frontage Road" />
+        </attvalues>
+      </edge>
+      <edge id="15387" source="[-96.2903601, 30.6018243]" target="[-96.290502, 30.596039]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="72.6151300528" />
+          <attvalue for="4" value="5.41451399224" />
+          <attvalue for="5" value="Earl Rudder Freeway" />
+        </attvalues>
+      </edge>
+      <edge id="16795" source="[-96.3002976, 30.6268285]" target="[-96.3031371, 30.6313685]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="321.965947495" />
+          <attvalue for="4" value="24.0072437586" />
+          <attvalue for="5" value="Earl Rudder Freeway" />
+        </attvalues>
+      </edge>
+      <edge id="9877" source="[-96.3769395, 30.6251075]" target="[-96.3772871, 30.6233431]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="45.3188444181" />
+          <attvalue for="4" value="3.37917892643" />
+          <attvalue for="5" value="North Harvey Mitchell Parkway" />
+        </attvalues>
+      </edge>
+      <edge id="9878" source="[-96.3769395, 30.6251075]" target="[-96.3767065, 30.6259054]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="27.8435987828" />
+          <attvalue for="4" value="2.07614522062" />
+          <attvalue for="5" value="North Harvey Mitchell Parkway" />
+        </attvalues>
+      </edge>
+      <edge id="5199" source="[-96.3348693, 30.6279069]" target="[-96.3361274, 30.6288416]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="140.998101531" />
+          <attvalue for="4" value="10.5134590142" />
+          <attvalue for="5" value="Texas Avenue" />
+        </attvalues>
+      </edge>
+      <edge id="5200" source="[-96.3348693, 30.6279069]" target="[-96.3349726, 30.6278084]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="11.6002563944" />
+          <attvalue for="4" value="0.864967817523" />
+          <attvalue for="5" value="University Drive East" />
+        </attvalues>
+      </edge>
+      <edge id="12342" source="[-96.336498, 30.629166]" target="[-96.338278, 30.63065]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="199.630985591" />
+          <attvalue for="4" value="11.1640449172" />
+          <attvalue for="5" value="Texas Avenue" />
+        </attvalues>
+      </edge>
+      <edge id="12340" source="[-96.336498, 30.629166]" target="[-96.3361274, 30.6288416]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="41.5814097098" />
+          <attvalue for="4" value="2.32537411137" />
+          <attvalue for="5" value="Texas Avenue" />
+        </attvalues>
+      </edge>
+      <edge id="9443" source="[-96.3114207, 30.6396856]" target="[-96.308594, 30.63753]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="316.830032499" />
+          <attvalue for="4" value="23.6242866037" />
+          <attvalue for="5" value="North Earl Rudder Freeway Frontage Road" />
+        </attvalues>
+      </edge>
+      <edge id="9444" source="[-96.3114207, 30.6396856]" target="[-96.308596, 30.6415032]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="316.252373102" />
+          <attvalue for="4" value="23.5812136947" />
+          <attvalue for="5" value="University Drive East" />
+        </attvalues>
+      </edge>
+      <edge id="13168" source="[-96.3564319, 30.6460865]" target="[-96.3574599, 30.646949]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="115.30158135" />
+          <attvalue for="4" value="6.44805729635" />
+          <attvalue for="5" value="Texas Avenue" />
+        </attvalues>
+      </edge>
+      <edge id="13169" source="[-96.3564319, 30.6460865]" target="[-96.3554062, 30.6452205]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="115.049685987" />
+          <attvalue for="4" value="6.43397044934" />
+          <attvalue for="5" value="Texas Avenue" />
+        </attvalues>
+      </edge>
+      <edge id="4967" source="[-96.3693668, 30.6583913]" target="[-96.370413, 30.6593682]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="117.465120923" />
+          <attvalue for="4" value="6.5690498011" />
+          <attvalue for="5" value="Texas Avenue" />
+        </attvalues>
+      </edge>
+      <edge id="4966" source="[-96.3693668, 30.6583913]" target="[-96.3677183, 30.6568932]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="185.037786449" />
+          <attvalue for="4" value="10.3479434977" />
+          <attvalue for="5" value="Texas Avenue" />
+        </attvalues>
+      </edge>
+      <edge id="11668" source="[-96.299988, 30.62569]" target="[-96.2983124, 30.6231096]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="189.785520799" />
+          <attvalue for="4" value="14.1512706394" />
+          <attvalue for="5" value="Earl Rudder Freeway" />
+        </attvalues>
+      </edge>
+      <edge id="17261" source="[-96.308689, 30.6416045]" target="[-96.3115318, 30.6397979]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="318.260335978" />
+          <attvalue for="4" value="23.730936529" />
+          <attvalue for="5" value="University Drive East" />
+        </attvalues>
+      </edge>
+      <edge id="15321" source="[-96.3501829, 30.6407811]" target="[-96.3502939, 30.6408777]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="12.453804846" />
+          <attvalue for="4" value="0.696459200853" />
+          <attvalue for="5" value="Texas Avenue" />
+        </attvalues>
+      </edge>
+      <edge id="15323" source="[-96.3501829, 30.6407811]" target="[-96.3491649, 30.6399241]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="114.185459702" />
+          <attvalue for="4" value="6.38563997082" />
+          <attvalue for="5" value="Texas Avenue" />
+        </attvalues>
+      </edge>
+      <edge id="769" source="[-96.3438366, 30.635396]" target="[-96.343905, 30.6354521]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="7.67023555614" />
+          <attvalue for="4" value="0.428945707103" />
+          <attvalue for="5" value="Texas Avenue" />
+        </attvalues>
+      </edge>
+      <edge id="771" source="[-96.3438366, 30.635396]" target="[-96.3430734, 30.6347492]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="85.6072340902" />
+          <attvalue for="4" value="4.78744821997" />
+          <attvalue for="5" value="Texas Avenue" />
+        </attvalues>
+      </edge>
+      <edge id="212" source="[-96.372818, 30.6636674]" target="[-96.3731946, 30.6661654]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="52.230515734" />
+          <attvalue for="4" value="3.89454453993" />
+          <attvalue for="5" value="South Main Street" />
+        </attvalues>
+      </edge>
+      <edge id="213" source="[-96.372818, 30.6636674]" target="[-96.3726011, 30.6621002]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="31.0522871003" />
+          <attvalue for="4" value="2.31539959887" />
+          <attvalue for="5" value="South Main Street" />
+        </attvalues>
+      </edge>
+      <edge id="13611" source="[-96.338278, 30.63065]" target="[-96.336498, 30.629166]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="199.630985591" />
+          <attvalue for="4" value="11.1640449172" />
+          <attvalue for="5" value="Texas Avenue" />
+        </attvalues>
+      </edge>
+      <edge id="13609" source="[-96.338278, 30.63065]" target="[-96.339787, 30.631959]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="169.296780565" />
+          <attvalue for="4" value="9.46765281435" />
+          <attvalue for="5" value="Texas Avenue" />
+        </attvalues>
+      </edge>
+      <edge id="4693" source="[-96.3502939, 30.6408777]" target="[-96.3506911, 30.6412123]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="44.5515432936" />
+          <attvalue for="4" value="2.49147410151" />
+          <attvalue for="5" value="Texas Avenue" />
+        </attvalues>
+      </edge>
+      <edge id="4694" source="[-96.3502939, 30.6408777]" target="[-96.3501829, 30.6407811]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="12.453804846" />
+          <attvalue for="4" value="0.696459200854" />
+          <attvalue for="5" value="Texas Avenue" />
+        </attvalues>
+      </edge>
+      <edge id="1530" source="[-96.3554062, 30.6452205]" target="[-96.3544099, 30.6443646]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="111.768910994" />
+          <attvalue for="4" value="6.25049833317" />
+          <attvalue for="5" value="Texas Avenue" />
+        </attvalues>
+      </edge>
+      <edge id="1531" source="[-96.3554062, 30.6452205]" target="[-96.3564319, 30.6460865]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="115.049685987" />
+          <attvalue for="4" value="6.43397044934" />
+          <attvalue for="5" value="Texas Avenue" />
+        </attvalues>
+      </edge>
+      <edge id="16530" source="[-96.3767753, 30.6202118]" target="[-96.3763715, 30.6191468]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="46.9916061791" />
+          <attvalue for="4" value="3.5039076428" />
+          <attvalue for="5" value="Harvey Mitchell Parkway South" />
+        </attvalues>
+      </edge>
+      <edge id="16531" source="[-96.3767753, 30.6202118]" target="[-96.3769964, 30.6209936]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="26.5287564398" />
+          <attvalue for="4" value="1.97810460211" />
+          <attvalue for="5" value="Harvey Mitchell Parkway South" />
+        </attvalues>
+      </edge>
+      <edge id="12196" source="[-96.3115318, 30.6397979]" target="[-96.3114207, 30.6396856]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="12.4840665847" />
+          <attvalue for="4" value="0.930868720523" />
+          <attvalue for="5" value="North Earl Rudder Freeway Frontage Road" />
+        </attvalues>
+      </edge>
+      <edge id="13634" source="[-96.2740047, 30.5726605]" target="[-96.2792, 30.57705]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="582.713081624" />
+          <attvalue for="4" value="43.4497346713" />
+          <attvalue for="5" value="North Earl Rudder Freeway Frontage Road" />
+        </attvalues>
+      </edge>
+      <edge id="5788" source="[-96.3662719, 30.6555348]" target="[-96.365174, 30.654499]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="123.282674263" />
+          <attvalue for="4" value="6.89438720602" />
+          <attvalue for="5" value="Texas Avenue" />
+        </attvalues>
+      </edge>
+      <edge id="5789" source="[-96.3662719, 30.6555348]" target="[-96.3677183, 30.6568932]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="162.407959196" />
+          <attvalue for="4" value="9.08240645112" />
+          <attvalue for="5" value="Texas Avenue" />
+        </attvalues>
+      </edge>
+      <edge id="8842" source="[-96.364744, 30.6031941]" target="[-96.363419, 30.6011812]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="150.05985897" />
+          <attvalue for="4" value="11.189144817" />
+          <attvalue for="5" value="Harvey Mitchell Parkway South" />
+        </attvalues>
+      </edge>
+      <edge id="8844" source="[-96.364744, 30.6031941]" target="[-96.3666191, 30.605305]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="211.068650723" />
+          <attvalue for="4" value="15.7382374972" />
+          <attvalue for="5" value="Harvey Mitchell Parkway South" />
+        </attvalues>
+      </edge>
+      <edge id="1319" source="[-96.3607383, 30.6953704]" target="[-96.3616637, 30.6947885]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="103.599340011" />
+          <attvalue for="4" value="5.1498916334" />
+          <attvalue for="5" value="San Jacinto Avenue" />
+        </attvalues>
+      </edge>
+      <edge id="1322" source="[-96.3607383, 30.6953704]" target="[-96.360101, 30.695765]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="71.3410131265" />
+          <attvalue for="4" value="3.54634003055" />
+          <attvalue for="5" value="San Jacinto Avenue" />
+        </attvalues>
+      </edge>
+      <edge id="15400" source="[-96.3484318, 30.6392907]" target="[-96.3491649, 30.6399241]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="82.2456266544" />
+          <attvalue for="4" value="4.59945567815" />
+          <attvalue for="5" value="Texas Avenue" />
+        </attvalues>
+      </edge>
+      <edge id="15401" source="[-96.3484318, 30.6392907]" target="[-96.3483898, 30.6392546]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="4.71170770787" />
+          <attvalue for="4" value="0.263494749232" />
+          <attvalue for="5" value="Texas Avenue" />
+        </attvalues>
+      </edge>
+      <edge id="7440" source="[-96.3431888, 30.5864079]" target="[-96.3432306, 30.5864023]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="4.66874366364" />
+          <attvalue for="4" value="0.348122737983" />
+          <attvalue for="5" value="Harvey Mitchell Parkway South" />
+        </attvalues>
+      </edge>
+      <edge id="7441" source="[-96.3431888, 30.5864079]" target="[-96.3404067, 30.586573]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="310.712192321" />
+          <attvalue for="4" value="23.1681126462" />
+          <attvalue for="5" value="Harvey Mitchell Parkway South" />
+        </attvalues>
+      </edge>
+      <edge id="3676" source="[-96.3264505, 30.6641996]" target="[-96.328623, 30.662276]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="243.779893908" />
+          <attvalue for="4" value="18.1773363986" />
+          <attvalue for="5" value="Briarcrest Drive" />
+        </attvalues>
+      </edge>
+      <edge id="7519" source="[-96.2792, 30.57705]" target="[-96.2808008, 30.579342]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="180.965062134" />
+          <attvalue for="4" value="13.4935771694" />
+          <attvalue for="5" value="North Earl Rudder Freeway Frontage Road" />
+        </attvalues>
+      </edge>
+      <edge id="2275" source="[-96.3769964, 30.6209936]" target="[-96.3772871, 30.6233431]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="48.41718542" />
+          <attvalue for="4" value="3.61020530751" />
+          <attvalue for="5" value="North Harvey Mitchell Parkway" />
+        </attvalues>
+      </edge>
+      <edge id="2274" source="[-96.3769964, 30.6209936]" target="[-96.3767753, 30.6202118]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="26.5287564398" />
+          <attvalue for="4" value="1.97810460211" />
+          <attvalue for="5" value="Harvey Mitchell Parkway South" />
+        </attvalues>
+      </edge>
+      <edge id="17276" source="[-96.3715643, 30.6606871]" target="[-96.370413, 30.6593682]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="129.640600625" />
+          <attvalue for="4" value="7.24994411157" />
+          <attvalue for="5" value="Texas Avenue" />
+        </attvalues>
+      </edge>
+      <edge id="7169" source="[-96.3628244, 30.6523126]" target="[-96.3624444, 30.6518988]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="42.7463965657" />
+          <attvalue for="4" value="2.39052414581" />
+          <attvalue for="5" value="Texas Avenue" />
+        </attvalues>
+      </edge>
+      <edge id="7170" source="[-96.3628244, 30.6523126]" target="[-96.3637335, 30.653189]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="102.106476075" />
+          <attvalue for="4" value="5.71014204963" />
+          <attvalue for="5" value="Texas Avenue" />
+        </attvalues>
+      </edge>
+      <edge id="6216" source="[-96.2737188, 30.5724452]" target="[-96.2740047, 30.5726605]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="32.0374096449" />
+          <attvalue for="4" value="2.38885481127" />
+          <attvalue for="5" value="North Earl Rudder Freeway Frontage Road" />
+        </attvalues>
+      </edge>
+      <edge id="9493" source="[-96.290293, 30.607658]" target="[-96.2903601, 30.6018243]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="77.6803073137" />
+          <attvalue for="4" value="5.79219662026" />
+          <attvalue for="5" value="Earl Rudder Freeway" />
+        </attvalues>
+      </edge>
+      <edge id="14419" source="[-96.3404067, 30.586573]" target="[-96.3403774, 30.5865748]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="3.27230546925" />
+          <attvalue for="4" value="0.243997962095" />
+          <attvalue for="5" value="Harvey Mitchell Parkway South" />
+        </attvalues>
+      </edge>
+      <edge id="14420" source="[-96.3404067, 30.586573]" target="[-96.3431888, 30.5864079]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="310.712192321" />
+          <attvalue for="4" value="23.1681126462" />
+          <attvalue for="5" value="Harvey Mitchell Parkway South" />
+        </attvalues>
+      </edge>
+      <edge id="8579" source="[-96.3544099, 30.6443646]" target="[-96.35342, 30.643594]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="110.961760406" />
+          <attvalue for="4" value="6.20535972205" />
+          <attvalue for="5" value="Texas Avenue" />
+        </attvalues>
+      </edge>
+      <edge id="8578" source="[-96.3544099, 30.6443646]" target="[-96.3554062, 30.6452205]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="111.768910995" />
+          <attvalue for="4" value="6.25049833318" />
+          <attvalue for="5" value="Texas Avenue" />
+        </attvalues>
+      </edge>
+      <edge id="5445" source="[-96.3483898, 30.6392546]" target="[-96.3484318, 30.6392907]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="4.71170770789" />
+          <attvalue for="4" value="0.263494749233" />
+          <attvalue for="5" value="Texas Avenue" />
+        </attvalues>
+      </edge>
+      <edge id="5447" source="[-96.3483898, 30.6392546]" target="[-96.3477047, 30.6386749]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="76.8462689753" />
+          <attvalue for="4" value="4.2975051995" />
+          <attvalue for="5" value="Texas Avenue" />
+        </attvalues>
+      </edge>
+      <edge id="8163" source="[-96.3098702, 30.6403824]" target="[-96.3134522, 30.6447703]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="403.659182283" />
+          <attvalue for="4" value="30.0986624823" />
+          <attvalue for="5" value="Earl Rudder Freeway" />
+        </attvalues>
+      </edge>
+      <edge id="9969" source="[-96.3616637, 30.6947885]" target="[-96.3607383, 30.6953704]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="103.599340011" />
+          <attvalue for="4" value="5.1498916334" />
+          <attvalue for="5" value="San Jacinto Avenue" />
+        </attvalues>
+      </edge>
+      <edge id="9970" source="[-96.3616637, 30.6947885]" target="[-96.363829, 30.693478]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="242.364379489" />
+          <attvalue for="4" value="12.0478594751" />
+          <attvalue for="5" value="San Jacinto Avenue" />
+        </attvalues>
+      </edge>
+      <edge id="7395" source="[-96.2896195, 30.5951993]" target="[-96.2896854, 30.5963098]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="15.9727790759" />
+          <attvalue for="4" value="1.19100297333" />
+          <attvalue for="5" value="North Earl Rudder Freeway Frontage Road" />
+        </attvalues>
+      </edge>
+      <edge id="9323" source="[-96.3430734, 30.6347492]" target="[-96.342129, 30.633947]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="105.934216194" />
+          <attvalue for="4" value="5.92420231935" />
+          <attvalue for="5" value="Texas Avenue" />
+        </attvalues>
+      </edge>
+      <edge id="9324" source="[-96.3430734, 30.6347492]" target="[-96.3438366, 30.635396]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="85.6072340901" />
+          <attvalue for="4" value="4.78744821997" />
+          <attvalue for="5" value="Texas Avenue" />
+        </attvalues>
+      </edge>
+      <edge id="6552" source="[-96.289902, 30.607277]" target="[-96.2925803, 30.6145779]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="315.868572562" />
+          <attvalue for="4" value="23.5525957827" />
+          <attvalue for="5" value="Earl Rudder Freeway" />
+        </attvalues>
+      </edge>
+      <edge id="2889" source="[-96.3037885, 30.6318194]" target="[-96.299988, 30.62569]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="431.065663383" />
+          <attvalue for="4" value="32.1422142226" />
+          <attvalue for="5" value="Earl Rudder Freeway" />
+        </attvalues>
+      </edge>
+      <edge id="8244" source="[-96.3574599, 30.646949]" target="[-96.3589785, 30.6482863]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="170.404196767" />
+          <attvalue for="4" value="9.52958330168" />
+          <attvalue for="5" value="Texas Avenue" />
+        </attvalues>
+      </edge>
+      <edge id="8242" source="[-96.3574599, 30.646949]" target="[-96.3564319, 30.6460865]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="115.30158135" />
+          <attvalue for="4" value="6.44805729635" />
+          <attvalue for="5" value="Texas Avenue" />
+        </attvalues>
+      </edge>
+      <edge id="15126" source="[-96.3639047, 30.6533548]" target="[-96.365174, 30.654499]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="142.461678087" />
+          <attvalue for="4" value="7.96694244852" />
+          <attvalue for="5" value="Texas Avenue" />
+        </attvalues>
+      </edge>
+      <edge id="15128" source="[-96.3639047, 30.6533548]" target="[-96.3637335, 30.653189]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="19.2294949055" />
+          <attvalue for="4" value="1.0753788758" />
+          <attvalue for="5" value="Texas Avenue" />
+        </attvalues>
+      </edge>
+      <edge id="12895" source="[-96.3624444, 30.6518988]" target="[-96.3613522, 30.6507206]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="122.845489825" />
+          <attvalue for="4" value="6.86993836265" />
+          <attvalue for="5" value="Texas Avenue" />
+        </attvalues>
+      </edge>
+      <edge id="12896" source="[-96.3624444, 30.6518988]" target="[-96.3628244, 30.6523126]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="42.7463965657" />
+          <attvalue for="4" value="2.39052414581" />
+          <attvalue for="5" value="Texas Avenue" />
+        </attvalues>
+      </edge>
+      <edge id="12847" source="[-96.367, 30.6915549]" target="[-96.3674841, 30.6912669]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="54.1818947157" />
+          <attvalue for="4" value="2.69336548137" />
+          <attvalue for="5" value="San Jacinto Avenue" />
+        </attvalues>
+      </edge>
+      <edge id="12845" source="[-96.367, 30.6915549]" target="[-96.366405, 30.691913]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="66.5975074148" />
+          <attvalue for="4" value="3.31054180659" />
+          <attvalue for="5" value="San Jacinto Avenue" />
+        </attvalues>
+      </edge>
+      <edge id="7528" source="[-96.2735748, 30.5723308]" target="[-96.2737188, 30.5724452]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="16.1424907709" />
+          <attvalue for="4" value="1.20365744832" />
+          <attvalue for="5" value="North Earl Rudder Freeway Frontage Road" />
+        </attvalues>
+      </edge>
+      <edge id="6228" source="[-96.366405, 30.691913]" target="[-96.367, 30.6915549]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="66.5975074148" />
+          <attvalue for="4" value="3.31054180659" />
+          <attvalue for="5" value="San Jacinto Avenue" />
+        </attvalues>
+      </edge>
+      <edge id="6229" source="[-96.366405, 30.691913]" target="[-96.366111, 30.692096]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="32.9120740503" />
+          <attvalue for="4" value="1.63604917533" />
+          <attvalue for="5" value="San Jacinto Avenue" />
+        </attvalues>
+      </edge>
+      <edge id="94" source="[-96.292607, 30.614057]" target="[-96.290293, 30.607658]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="272.985725645" />
+          <attvalue for="4" value="20.3550558969" />
+          <attvalue for="5" value="Earl Rudder Freeway" />
+        </attvalues>
+      </edge>
+      <edge id="4028" source="[-96.342129, 30.633947]" target="[-96.3420062, 30.6338352]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="13.783520083" />
+          <attvalue for="4" value="0.770821407649" />
+          <attvalue for="5" value="Texas Avenue" />
+        </attvalues>
+      </edge>
+      <edge id="4029" source="[-96.342129, 30.633947]" target="[-96.3430734, 30.6347492]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="105.934216194" />
+          <attvalue for="4" value="5.92420231935" />
+          <attvalue for="5" value="Texas Avenue" />
+        </attvalues>
+      </edge>
+      <edge id="3021" source="[-96.348615, 30.588167]" target="[-96.348615, 30.588167]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="312.386161397" />
+          <attvalue for="4" value="23.2929313855" />
+          <attvalue for="5" value="Luther Street West" />
+        </attvalues>
+      </edge>
+      <edge id="3022" source="[-96.348615, 30.588167]" target="[-96.3432496, 30.5864016]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="599.839534055" />
+          <attvalue for="4" value="44.7267607712" />
+          <attvalue for="5" value="Harvey Mitchell Parkway South" />
+        </attvalues>
+      </edge>
+      <edge id="3024" source="[-96.348615, 30.588167]" target="[-96.3542336, 30.5920626]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="629.331713543" />
+          <attvalue for="4" value="46.9258316588" />
+          <attvalue for="5" value="Harvey Mitchell Parkway South" />
+        </attvalues>
+      </edge>
+      <edge id="2899" source="[-96.363829, 30.693478]" target="[-96.3616637, 30.6947885]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="242.364379489" />
+          <attvalue for="4" value="12.0478594751" />
+          <attvalue for="5" value="San Jacinto Avenue" />
+        </attvalues>
+      </edge>
+      <edge id="2900" source="[-96.363829, 30.693478]" target="[-96.365049, 30.692757]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="136.541842312" />
+          <attvalue for="4" value="6.7874533878" />
+          <attvalue for="5" value="San Jacinto Avenue" />
+        </attvalues>
+      </edge>
+      <edge id="2901" source="[-96.363829, 30.693478]" target="[-96.363829, 30.693478]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="368.739459577" />
+          <attvalue for="4" value="27.4948893147" />
+          <attvalue for="5" value="Murphy Lane" />
+        </attvalues>
+      </edge>
+      <edge id="10336" source="[-96.308594, 30.63753]" target="[-96.307677, 30.636541]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="103.127559954" />
+          <attvalue for="4" value="7.68965938575" />
+          <attvalue for="5" value="North Earl Rudder Freeway Frontage Road" />
+        </attvalues>
+      </edge>
+      <edge id="7672" source="[-96.28958, 30.5948999]" target="[-96.2896195, 30.5951993]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="5.73421365555" />
+          <attvalue for="4" value="0.427569021083" />
+          <attvalue for="5" value="North Earl Rudder Freeway Frontage Road" />
+        </attvalues>
+      </edge>
+      <edge id="8860" source="[-96.3542336, 30.5920626]" target="[-96.348615, 30.588167]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="629.331713543" />
+          <attvalue for="4" value="46.9258316589" />
+          <attvalue for="5" value="Harvey Mitchell Parkway South" />
+        </attvalues>
+      </edge>
+      <edge id="8863" source="[-96.3542336, 30.5920626]" target="[-96.362223, 30.599495]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="897.563327479" />
+          <attvalue for="4" value="66.9263993885" />
+          <attvalue for="5" value="Harvey Mitchell Parkway South" />
+        </attvalues>
+      </edge>
+      <edge id="7228" source="[-96.2857357, 30.5844994]" target="[-96.287239, 30.583729]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="168.153383365" />
+          <attvalue for="4" value="12.538280196" />
+          <attvalue for="5" value="Rock Prairie Road" />
+        </attvalues>
+      </edge>
+      <edge id="10193" source="[-96.363419, 30.6011812]" target="[-96.364744, 30.6031941]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="150.05985897" />
+          <attvalue for="4" value="11.189144817" />
+          <attvalue for="5" value="Harvey Mitchell Parkway South" />
+        </attvalues>
+      </edge>
+      <edge id="10195" source="[-96.363419, 30.6011812]" target="[-96.362223, 30.599495]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="135.19027572" />
+          <attvalue for="4" value="10.0804011364" />
+          <attvalue for="5" value="Harvey Mitchell Parkway South" />
+        </attvalues>
+      </edge>
+      <edge id="6040" source="[-96.3726011, 30.6621002]" target="[-96.3721976, 30.660389]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="50.3675461559" />
+          <attvalue for="4" value="3.75563306459" />
+          <attvalue for="5" value="South Main Street" />
+        </attvalues>
+      </edge>
+      <edge id="6038" source="[-96.3726011, 30.6621002]" target="[-96.372818, 30.6636674]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="31.0522871004" />
+          <attvalue for="4" value="2.31539959887" />
+          <attvalue for="5" value="South Main Street" />
+        </attvalues>
+      </edge>
+      <edge id="6039" source="[-96.3726011, 30.6621002]" target="[-96.3726011, 30.6621002]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="238.742464787" />
+          <attvalue for="4" value="17.8017227979" />
+          <attvalue for="5" value="East Pease Street" />
+        </attvalues>
+      </edge>
+      <edge id="1556" source="[-96.35342, 30.643594]" target="[-96.3544099, 30.6443646]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="110.961760406" />
+          <attvalue for="4" value="6.20535972204" />
+          <attvalue for="5" value="Texas Avenue" />
+        </attvalues>
+      </edge>
+      <edge id="1554" source="[-96.35342, 30.643594]" target="[-96.3518814, 30.6422363]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="172.650514318" />
+          <attvalue for="4" value="9.655205033" />
+          <attvalue for="5" value="Texas Avenue" />
+        </attvalues>
+      </edge>
+      <edge id="13055" source="[-96.3721976, 30.660389]" target="[-96.3726011, 30.6621002]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="50.3675461558" />
+          <attvalue for="4" value="3.75563306459" />
+          <attvalue for="5" value="South Main Street" />
+        </attvalues>
+      </edge>
+      <edge id="7035" source="[-96.3432496, 30.5864016]" target="[-96.348615, 30.588167]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="599.839534055" />
+          <attvalue for="4" value="44.7267607712" />
+          <attvalue for="5" value="Harvey Mitchell Parkway South" />
+        </attvalues>
+      </edge>
+      <edge id="7037" source="[-96.3432496, 30.5864016]" target="[-96.3432306, 30.5864023]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="2.12194133296" />
+          <attvalue for="4" value="0.15822158591" />
+          <attvalue for="5" value="Harvey Mitchell Parkway South" />
+        </attvalues>
+      </edge>
+      <edge id="817" source="[-96.287239, 30.583729]" target="[-96.2862746, 30.5807472]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="119.185385661" />
+          <attvalue for="4" value="8.88700382226" />
+          <attvalue for="5" value="Longmire Drive" />
+        </attvalues>
+      </edge>
+      <edge id="819" source="[-96.287239, 30.583729]" target="[-96.2857357, 30.5844994]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="168.153383365" />
+          <attvalue for="4" value="12.538280196" />
+          <attvalue for="5" value="Rock Prairie Road" />
+        </attvalues>
+      </edge>
+      <edge id="14496" source="[-96.3468977, 30.6379898]" target="[-96.346349, 30.637525]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="61.5470363669" />
+          <attvalue for="4" value="3.44191998294" />
+          <attvalue for="5" value="Texas Avenue" />
+        </attvalues>
+      </edge>
+      <edge id="14497" source="[-96.3468977, 30.6379898]" target="[-96.3477047, 30.6386749]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="90.5220504294" />
+          <attvalue for="4" value="5.06230149592" />
+          <attvalue for="5" value="Texas Avenue" />
+        </attvalues>
+      </edge>
+      <edge id="14732" source="[-96.3674841, 30.6912669]" target="[-96.367, 30.6915549]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="54.1818947157" />
+          <attvalue for="4" value="2.69336548137" />
+          <attvalue for="5" value="San Jacinto Avenue" />
+        </attvalues>
+      </edge>
+      <edge id="15427" source="[-96.344785, 30.636197]" target="[-96.3453223, 30.636662]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="60.2796495723" />
+          <attvalue for="4" value="3.37104339501" />
+          <attvalue for="5" value="Texas Avenue" />
+        </attvalues>
+      </edge>
+      <edge id="15428" source="[-96.344785, 30.636197]" target="[-96.3446148, 30.636053]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="19.09088449" />
+          <attvalue for="4" value="1.06762730908" />
+          <attvalue for="5" value="Texas Avenue" />
+        </attvalues>
+      </edge>
+      <edge id="15639" source="[-96.360101, 30.695765]" target="[-96.3607383, 30.6953704]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="71.3410131265" />
+          <attvalue for="4" value="3.54634003055" />
+          <attvalue for="5" value="San Jacinto Avenue" />
+        </attvalues>
+      </edge>
+      <edge id="15641" source="[-96.360101, 30.695765]" target="[-96.359818, 30.695939]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="31.6787082955" />
+          <attvalue for="4" value="1.57473893937" />
+          <attvalue for="5" value="San Jacinto Avenue" />
+        </attvalues>
+      </edge>
+      <edge id="6481" source="[-96.328623, 30.662276]" target="[-96.3264505, 30.6641996]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="243.779893908" />
+          <attvalue for="4" value="18.1773363986" />
+          <attvalue for="5" value="Briarcrest Drive" />
+        </attvalues>
+      </edge>
+      <edge id="6482" source="[-96.328623, 30.662276]" target="[-96.3276039, 30.6611592]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="114.640750261" />
+          <attvalue for="4" value="8.54813516027" />
+          <attvalue for="5" value="North Earl Rudder Freeway Frontage Road" />
+        </attvalues>
+      </edge>
+      <edge id="6854" source="[-96.331365, 30.666722]" target="[-96.334271, 30.6684671]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="325.254107789" />
+          <attvalue for="4" value="24.2524239284" />
+          <attvalue for="5" value="North Earl Rudder Freeway" />
+        </attvalues>
+      </edge>
+      <edge id="17418" source="[-96.2849847, 30.5788992]" target="[-96.2862746, 30.5807472]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="146.152973114" />
+          <attvalue for="4" value="10.8978296583" />
+          <attvalue for="5" value="Longmire Drive" />
+        </attvalues>
+      </edge>
+      <edge id="7240" source="[-96.360192, 30.649556]" target="[-96.3606395, 30.6500027]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="50.2815574708" />
+          <attvalue for="4" value="2.81191601818" />
+          <attvalue for="5" value="Texas Avenue" />
+        </attvalues>
+      </edge>
+      <edge id="7241" source="[-96.360192, 30.649556]" target="[-96.3589785, 30.6482863]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="136.431980624" />
+          <attvalue for="4" value="7.62974122135" />
+          <attvalue for="5" value="Texas Avenue" />
+        </attvalues>
+      </edge>
+      <edge id="4559" source="[-96.3420062, 30.6338352]" target="[-96.339787, 30.631959]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="248.918986612" />
+          <attvalue for="4" value="13.9203978734" />
+          <attvalue for="5" value="Texas Avenue" />
+        </attvalues>
+      </edge>
+      <edge id="4561" source="[-96.3420062, 30.6338352]" target="[-96.342129, 30.633947]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="13.783520083" />
+          <attvalue for="4" value="0.770821407647" />
+          <attvalue for="5" value="Texas Avenue" />
+        </attvalues>
+      </edge>
+      <edge id="2970" source="[-96.3637335, 30.653189]" target="[-96.3639047, 30.6533548]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="19.2294949056" />
+          <attvalue for="4" value="1.0753788758" />
+          <attvalue for="5" value="Texas Avenue" />
+        </attvalues>
+      </edge>
+      <edge id="2971" source="[-96.3637335, 30.653189]" target="[-96.3628244, 30.6523126]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="102.106476075" />
+          <attvalue for="4" value="5.71014204963" />
+          <attvalue for="5" value="Texas Avenue" />
+        </attvalues>
+      </edge>
+      <edge id="16232" source="[-96.3506911, 30.6412123]" target="[-96.3502939, 30.6408777]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="44.5515432936" />
+          <attvalue for="4" value="2.49147410151" />
+          <attvalue for="5" value="Texas Avenue" />
+        </attvalues>
+      </edge>
+      <edge id="16234" source="[-96.3506911, 30.6412123]" target="[-96.3518814, 30.6422363]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="133.533628101" />
+          <attvalue for="4" value="7.46765547271" />
+          <attvalue for="5" value="Texas Avenue" />
+        </attvalues>
+      </edge>
+      <edge id="14232" source="[-96.3772871, 30.6233431]" target="[-96.3769964, 30.6209936]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="48.41718542" />
+          <attvalue for="4" value="3.61020530751" />
+          <attvalue for="5" value="North Harvey Mitchell Parkway" />
+        </attvalues>
+      </edge>
+      <edge id="14234" source="[-96.3772871, 30.6233431]" target="[-96.3769395, 30.6251075]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="45.318844418" />
+          <attvalue for="4" value="3.37917892642" />
+          <attvalue for="5" value="North Harvey Mitchell Parkway" />
+        </attvalues>
+      </edge>
+      <edge id="7476" source="[-96.3589785, 30.6482863]" target="[-96.360192, 30.649556]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="136.431980624" />
+          <attvalue for="4" value="7.62974122134" />
+          <attvalue for="5" value="Texas Avenue" />
+        </attvalues>
+      </edge>
+      <edge id="7478" source="[-96.3589785, 30.6482863]" target="[-96.3574599, 30.646949]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="170.404196767" />
+          <attvalue for="4" value="9.52958330167" />
+          <attvalue for="5" value="Texas Avenue" />
+        </attvalues>
+      </edge>
+      <edge id="13466" source="[-96.3767065, 30.6259054]" target="[-96.3769395, 30.6251075]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="27.843598783" />
+          <attvalue for="4" value="2.07614522064" />
+          <attvalue for="5" value="North Harvey Mitchell Parkway" />
+        </attvalues>
+      </edge>
+      <edge id="4210" source="[-96.3763715, 30.6191468]" target="[-96.3747326, 30.6150637]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="189.942599022" />
+          <attvalue for="4" value="14.1629831053" />
+          <attvalue for="5" value="Harvey Mitchell Parkway South" />
+        </attvalues>
+      </edge>
+      <edge id="4212" source="[-96.3763715, 30.6191468]" target="[-96.3767753, 30.6202118]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="46.9916061791" />
+          <attvalue for="4" value="3.5039076428" />
+          <attvalue for="5" value="Harvey Mitchell Parkway South" />
+        </attvalues>
+      </edge>
+      <edge id="5405" source="[-96.3446148, 30.636053]" target="[-96.343905, 30.6354521]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="79.6167832831" />
+          <attvalue for="4" value="4.45244179957" />
+          <attvalue for="5" value="Texas Avenue" />
+        </attvalues>
+      </edge>
+      <edge id="5406" source="[-96.3446148, 30.636053]" target="[-96.344785, 30.636197]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="19.0908844899" />
+          <attvalue for="4" value="1.06762730907" />
+          <attvalue for="5" value="Texas Avenue" />
+        </attvalues>
+      </edge>
+      <edge id="459" source="[-96.362223, 30.599495]" target="[-96.3542336, 30.5920626]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="897.563327479" />
+          <attvalue for="4" value="66.9263993885" />
+          <attvalue for="5" value="Harvey Mitchell Parkway South" />
+        </attvalues>
+      </edge>
+      <edge id="457" source="[-96.362223, 30.599495]" target="[-96.363419, 30.6011812]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="135.19027572" />
+          <attvalue for="4" value="10.0804011364" />
+          <attvalue for="5" value="Harvey Mitchell Parkway South" />
+        </attvalues>
+      </edge>
+      <edge id="14999" source="[-96.3402559, 30.5865823]" target="[-96.3403774, 30.5865748]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="13.5694608618" />
+          <attvalue for="4" value="1.01180064884" />
+          <attvalue for="5" value="Harvey Mitchell Parkway South" />
+        </attvalues>
+      </edge>
+      <edge id="15000" source="[-96.3402559, 30.5865823]" target="[-96.3379713, 30.5867243]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="255.150629714" />
+          <attvalue for="4" value="19.0251901183" />
+          <attvalue for="5" value="Harvey Mitchell Parkway South" />
+        </attvalues>
+      </edge>
+      <edge id="1128" source="[-96.2862746, 30.5807472]" target="[-96.287239, 30.583729]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="119.185385661" />
+          <attvalue for="4" value="8.88700382227" />
+          <attvalue for="5" value="Longmire Drive" />
+        </attvalues>
+      </edge>
+      <edge id="1129" source="[-96.2862746, 30.5807472]" target="[-96.2849847, 30.5788992]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="146.152973114" />
+          <attvalue for="4" value="10.8978296583" />
+          <attvalue for="5" value="Longmire Drive" />
+        </attvalues>
+      </edge>
+      <edge id="17196" source="[-96.2896854, 30.5963098]" target="[-96.2900565, 30.6008413]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="73.8661322336" />
+          <attvalue for="4" value="5.50779439823" />
+          <attvalue for="5" value="unknown" />
+        </attvalues>
+      </edge>
+      <edge id="17001" source="[-96.3379713, 30.5867243]" target="[-96.3402559, 30.5865823]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="255.150629714" />
+          <attvalue for="4" value="19.0251901183" />
+          <attvalue for="5" value="Harvey Mitchell Parkway South" />
+        </attvalues>
+      </edge>
+      <edge id="13284" source="[-96.294762, 30.6167]" target="[-96.292607, 30.614057]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="242.83752683" />
+          <attvalue for="4" value="18.107069228" />
+          <attvalue for="5" value="unknown" />
+        </attvalues>
+      </edge>
+      <edge id="5158" source="[-96.365174, 30.654499]" target="[-96.3662719, 30.6555348]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="123.282674263" />
+          <attvalue for="4" value="6.89438720602" />
+          <attvalue for="5" value="Texas Avenue" />
+        </attvalues>
+      </edge>
+      <edge id="5159" source="[-96.365174, 30.654499]" target="[-96.3639047, 30.6533548]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="142.461678087" />
+          <attvalue for="4" value="7.96694244852" />
+          <attvalue for="5" value="Texas Avenue" />
+        </attvalues>
+      </edge>
+      <edge id="5415" source="[-96.3031371, 30.6313685]" target="[-96.3098702, 30.6403824]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="760.213711457" />
+          <attvalue for="4" value="56.6849880292" />
+          <attvalue for="5" value="Earl Rudder Freeway" />
+        </attvalues>
+      </edge>
+      <edge id="1210" source="[-96.2925803, 30.6145779]" target="[-96.2951483, 30.6186656]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="291.131260173" />
+          <attvalue for="4" value="21.7080693878" />
+          <attvalue for="5" value="Earl Rudder Freeway" />
+        </attvalues>
+      </edge>
+      <edge id="5478" source="[-96.366111, 30.692096]" target="[-96.365049, 30.692757]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="118.886380103" />
+          <attvalue for="4" value="5.90980573961" />
+          <attvalue for="5" value="San Jacinto Avenue" />
+        </attvalues>
+      </edge>
+      <edge id="5480" source="[-96.366111, 30.692096]" target="[-96.366405, 30.691913]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="32.9120740501" />
+          <attvalue for="4" value="1.63604917532" />
+          <attvalue for="5" value="San Jacinto Avenue" />
+        </attvalues>
+      </edge>
+      <edge id="15705" source="[-96.2983124, 30.6231096]" target="[-96.292607, 30.614057]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="646.755369428" />
+          <attvalue for="4" value="48.2250185985" />
+          <attvalue for="5" value="Earl Rudder Freeway" />
+        </attvalues>
+      </edge>
+      <edge id="6995" source="[-96.3432306, 30.5864023]" target="[-96.3432496, 30.5864016]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="2.12194133289" />
+          <attvalue for="4" value="0.158221585905" />
+          <attvalue for="5" value="Harvey Mitchell Parkway South" />
+        </attvalues>
+      </edge>
+      <edge id="6994" source="[-96.3432306, 30.5864023]" target="[-96.3431888, 30.5864079]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="4.66874366366" />
+          <attvalue for="4" value="0.348122737984" />
+          <attvalue for="5" value="Harvey Mitchell Parkway South" />
+        </attvalues>
+      </edge>
+      <edge id="11800" source="[-96.3731946, 30.6661654]" target="[-96.372818, 30.6636674]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="52.230515734" />
+          <attvalue for="4" value="3.89454453994" />
+          <attvalue for="5" value="South Main Street" />
+        </attvalues>
+      </edge>
+      <edge id="10604" source="[-96.3666191, 30.605305]" target="[-96.364744, 30.6031941]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="211.068650723" />
+          <attvalue for="4" value="15.7382374972" />
+          <attvalue for="5" value="Harvey Mitchell Parkway South" />
+        </attvalues>
+      </edge>
+      <edge id="10603" source="[-96.3666191, 30.605305]" target="[-96.3718024, 30.6104267]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="582.345106259" />
+          <attvalue for="4" value="43.4222967564" />
+          <attvalue for="5" value="Harvey Mitchell Parkway South" />
+        </attvalues>
+      </edge>
+      <edge id="2859" source="[-96.3461664, 30.6373699]" target="[-96.3453223, 30.636662]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="94.6734314314" />
+          <attvalue for="4" value="5.29446086656" />
+          <attvalue for="5" value="Texas Avenue" />
+        </attvalues>
+      </edge>
+      <edge id="2857" source="[-96.3461664, 30.6373699]" target="[-96.346349, 30.637525]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="20.4825383515" />
+          <attvalue for="4" value="1.1454533348" />
+          <attvalue for="5" value="Texas Avenue" />
+        </attvalues>
+      </edge>
+      <edge id="6728" source="[-96.370413, 30.6593682]" target="[-96.3715643, 30.6606871]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="129.640600625" />
+          <attvalue for="4" value="7.24994411156" />
+          <attvalue for="5" value="Texas Avenue" />
+        </attvalues>
+      </edge>
+      <edge id="6730" source="[-96.370413, 30.6593682]" target="[-96.3693668, 30.6583913]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="117.465120923" />
+          <attvalue for="4" value="6.5690498011" />
+          <attvalue for="5" value="Texas Avenue" />
+        </attvalues>
+      </edge>
+      <edge id="9539" source="[-96.3491649, 30.6399241]" target="[-96.3484318, 30.6392907]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="82.2456266543" />
+          <attvalue for="4" value="4.59945567814" />
+          <attvalue for="5" value="Texas Avenue" />
+        </attvalues>
+      </edge>
+      <edge id="9538" source="[-96.3491649, 30.6399241]" target="[-96.3501829, 30.6407811]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="114.185459702" />
+          <attvalue for="4" value="6.38563997082" />
+          <attvalue for="5" value="Texas Avenue" />
+        </attvalues>
+      </edge>
+      <edge id="4599" source="[-96.2951483, 30.6186656]" target="[-96.3002976, 30.6268285]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="583.717035555" />
+          <attvalue for="4" value="43.5245940375" />
+          <attvalue for="5" value="Earl Rudder Freeway" />
+        </attvalues>
+      </edge>
+      <edge id="12030" source="[-96.3453223, 30.636662]" target="[-96.3461664, 30.6373699]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="94.6734314314" />
+          <attvalue for="4" value="5.29446086656" />
+          <attvalue for="5" value="Texas Avenue" />
+        </attvalues>
+      </edge>
+      <edge id="12031" source="[-96.3453223, 30.636662]" target="[-96.344785, 30.636197]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="60.2796495723" />
+          <attvalue for="4" value="3.37104339501" />
+          <attvalue for="5" value="Texas Avenue" />
+        </attvalues>
+      </edge>
+      <edge id="15079" source="[-96.3361274, 30.6288416]" target="[-96.336498, 30.629166]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="41.5814097099" />
+          <attvalue for="4" value="2.32537411137" />
+          <attvalue for="5" value="Texas Avenue" />
+        </attvalues>
+      </edge>
+      <edge id="5594" source="[-96.3677183, 30.6568932]" target="[-96.3662719, 30.6555348]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="162.407959196" />
+          <attvalue for="4" value="9.08240645112" />
+          <attvalue for="5" value="Texas Avenue" />
+        </attvalues>
+      </edge>
+      <edge id="5595" source="[-96.3677183, 30.6568932]" target="[-96.3693668, 30.6583913]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="185.037786449" />
+          <attvalue for="4" value="10.3479434977" />
+          <attvalue for="5" value="Texas Avenue" />
+        </attvalues>
+      </edge>
+      <edge id="7342" source="[-96.3518814, 30.6422363]" target="[-96.3506911, 30.6412123]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="133.533628101" />
+          <attvalue for="4" value="7.46765547271" />
+          <attvalue for="5" value="Texas Avenue" />
+        </attvalues>
+      </edge>
+      <edge id="7343" source="[-96.3518814, 30.6422363]" target="[-96.35342, 30.643594]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="172.650514318" />
+          <attvalue for="4" value="9.655205033" />
+          <attvalue for="5" value="Texas Avenue" />
+        </attvalues>
+      </edge>
+      <edge id="14376" source="[-96.2900565, 30.6008413]" target="[-96.289902, 30.607277]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="83.313976042" />
+          <attvalue for="4" value="6.21226855479" />
+          <attvalue for="5" value="Earl Rudder Freeway" />
+        </attvalues>
+      </edge>
+      <edge id="836" source="[-96.295909, 30.6184717]" target="[-96.294762, 30.6167]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="129.922143526" />
+          <attvalue for="4" value="9.68758526651" />
+          <attvalue for="5" value="North Earl Rudder Freeway Frontage Road" />
+        </attvalues>
+      </edge>
+      <edge id="2381" source="[-96.3747326, 30.6150637]" target="[-96.3763715, 30.6191468]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="189.942599022" />
+          <attvalue for="4" value="14.1629831053" />
+          <attvalue for="5" value="Harvey Mitchell Parkway South" />
+        </attvalues>
+      </edge>
+      <edge id="2380" source="[-96.3747326, 30.6150637]" target="[-96.3718024, 30.6104267]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="333.290422568" />
+          <attvalue for="4" value="24.8516480679" />
+          <attvalue for="5" value="Harvey Mitchell Parkway South" />
+        </attvalues>
+      </edge>
+      <edge id="12511" source="[-96.3477047, 30.6386749]" target="[-96.3468977, 30.6379898]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="90.5220504295" />
+          <attvalue for="4" value="5.06230149592" />
+          <attvalue for="5" value="Texas Avenue" />
+        </attvalues>
+      </edge>
+      <edge id="12510" source="[-96.3477047, 30.6386749]" target="[-96.3483898, 30.6392546]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="76.8462689753" />
+          <attvalue for="4" value="4.2975051995" />
+          <attvalue for="5" value="Texas Avenue" />
+        </attvalues>
+      </edge>
+      <edge id="7960" source="[-96.3606395, 30.6500027]" target="[-96.360192, 30.649556]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="50.2815574708" />
+          <attvalue for="4" value="2.81191601819" />
+          <attvalue for="5" value="Texas Avenue" />
+        </attvalues>
+      </edge>
+      <edge id="7962" source="[-96.3606395, 30.6500027]" target="[-96.3613522, 30.6507206]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="80.088633301" />
+          <attvalue for="4" value="4.4788292603" />
+          <attvalue for="5" value="Texas Avenue" />
+        </attvalues>
+      </edge>
+      <edge id="4332" source="[-96.343905, 30.6354521]" target="[-96.3446148, 30.636053]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="79.6167832833" />
+          <attvalue for="4" value="4.45244179957" />
+          <attvalue for="5" value="Texas Avenue" />
+        </attvalues>
+      </edge>
+      <edge id="4330" source="[-96.343905, 30.6354521]" target="[-96.3438366, 30.635396]" weight="0.0">
+        <attvalues>
+          <attvalue for="3" value="7.67023555615" />
+          <attvalue for="4" value="0.428945707104" />
+          <attvalue for="5" value="Texas Avenue" />
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>
