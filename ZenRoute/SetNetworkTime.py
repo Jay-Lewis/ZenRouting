@@ -7,7 +7,11 @@ import gmapsKeys
 import networkx as nx
 import googlemaps
 
-
+# DESCRIPTION: This script will take a neworkx directed graph G and update
+#
+# INPUT: networkx graph
+#
+# Output: Updated networkx graph
 
 def set_network_time(G,attr_key,time,usages):
  

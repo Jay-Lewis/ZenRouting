@@ -8,6 +8,7 @@ from WeightFunction import weightfunction
 from ZenScore import zenscore
 from random import choice
 from geopy.distance import vincenty as latlondist
+import geojson
 
 # DESCRIPTION: This script will generate the ideal ZenRoute based on a user's desired factor weights
 #
@@ -33,30 +34,32 @@ if set == 1:
     now = datetime.now()
     G = set_network_time(G,'currenttime',now,1800)
 
-# Generate Zenness metric
-for edge in G.edges():
-    nodeA = edge[0]
-    nodeB = edge[1]
+# Update "Zenness"
+set = 0
+if set == 1:
+    for edge in G.edges():
+        nodeA = edge[0]
+        nodeB = edge[1]
 
-    G[nodeA][nodeB]['Zenness'] = zenscore(G[nodeA][nodeB])
+        G[nodeA][nodeB]['Zenness'] = zenscore(G[nodeA][nodeB])
 
-# Generate Weighted Sum of Factors
-weights = [1,1,1]
-keys = ['Zenness','distance','currenttime']
-for edge in G.edges():
-    nodeA = edge[0]
-    nodeB = edge[1]
-    dict = G[nodeA][nodeB]
-    G[nodeA][nodeB]['weight'] = weightfunction(weights,dict,keys)
+    # Update Total Edge Weights
+    weights = [1,1,1]
+    keys = ['Zenness','distance','currenttime']
+    for edge in G.edges():
+        nodeA = edge[0]
+        nodeB = edge[1]
+        dict = G[nodeA][nodeB]
+        G[nodeA][nodeB]['weight'] = weightfunction(weights,dict,keys)
 
-# Save Network Graph
-filename = "OSMNetworkReducedSet.gexf"
-filepath = os.path.abspath(os.path.join(cwd, '..', 'Project Data','Networks',filename))
-nx.write_gexf(G,filepath)
+    # Save Network Graph
+    filename = "OSMNetworkReducedSet.gexf"
+    filepath = os.path.abspath(os.path.join(cwd, '..', 'Project Data','Networks',filename))
+    nx.write_gexf(G,filepath)
 
 
-# Djkistra's Shortest Path
-distancelimit = 3
+# Generate Source and Destination
+distancelimit = 3   # distance in miles
 
 lons = nx.get_node_attributes(G,'lon')
 lats = nx.get_node_attributes(G,'lat')
@@ -71,5 +74,19 @@ while(nodesdist < distancelimit):
 print('Source:',[lats[randomnodes[0]],lons[randomnodes[0]]])
 print('Destination',[lats[randomnodes[1]],lons[randomnodes[1]]])
 
+# Djkistra's Shortest Path
+path = nx.shortest_path(G,source = randomnodes[0],target = randomnodes[1],weight = 'weight')
+
 
 # Export Route
+
+Features = []
+for node in path:
+    Features.append(geojson.Feature(geometry=geojson.Point((lons[node], lats[node]))))
+Collection = geojson.FeatureCollection(Features)
+dump = geojson.dumps(Collection)
+filename = "ShortestPath.txt"
+filepath = os.path.abspath(os.path.join(cwd, '..', 'Project Data','Paths',filename))
+text_file = open(filepath, "w")
+text_file.write(dump)
+text_file.close()

@@ -22,7 +22,7 @@ values = []
 for edge in G.edges():
     nodeA = edge[0]
     nodeB = edge[1]
-    values.append(G[nodeA][nodeB]['weight'])
+    values.append(G[nodeA][nodeB]['Zenness'])
 
 # hist = numpy.histogram(values)
 plt.hist(values)
