@@ -13,7 +13,7 @@ import geojson
 # Geojson map data such as node positions, edge connections, edge types, max speeds, and edge names are extracted
 # The Geojson network is pruned to remove redundant network nodes.
 #
-# This reduced load does not include residential sections as part of the core network.
+# This reduced load does include residential sections as part of the core network.
 #
 # INPUT:
 # converted Open Street Map extract (.geojson format)
