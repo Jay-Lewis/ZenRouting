@@ -13,6 +13,7 @@ __author__ = 'Justin'
 
 
 from datetime import datetime
+from random import choice
 
 class keys:
     def __init__(self,keystringsfile,usagefile,datesfile, maxuses):
@@ -53,11 +54,22 @@ class keys:
                 currentkey.date = currentdate
 
     def getKey(self,usage):
-        for keystring in self.keysdict:
+        maxiter = 100
+        iter = 0
+        while(iter < maxiter):
+            keystring = choice(self.keysdict.keys())
             currentkey = self.keysdict[keystring]
-            if(currentkey.usage < self.maxusage):
-                self.updateKey(currentkey.name,usage)
-                return currentkey.name
+            if(currentkey.pause > 0):
+                currentkey.pause -= 1
+                print('minus 1')
+            else:
+                if(currentkey.usage < self.maxusage):
+                    self.updateKey(currentkey.name,usage)
+                    return currentkey.name
+                iter+=1
+
+    def setDefective(self,keystring,amount):
+        self.keysdict[keystring].pause += amount
 
     def printKeys(self):
         for keystring in self.keysdict:
@@ -86,6 +98,7 @@ class key:
         now = datetime.now()
         self.name = string
         self.date = [now.day,now.month,now.year]
+        self.pause = 0
         if(pastdate != (now.day,now.month,now.year)):
             self.usage = 0
         else:
