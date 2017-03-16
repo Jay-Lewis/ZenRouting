@@ -22,7 +22,7 @@ def rgb_to_hex(rgb):
 #
 # Outpus:
 
-def networkdisplay(G,routes,graphstyle,routestyles,normalize,title):
+def networkdisplay(G,routes,graphstyle,routestyles,maxZenscore,title):
 
     # I) -Generate Network 'G' Graphical Data--------------------
 
@@ -40,14 +40,6 @@ def networkdisplay(G,routes,graphstyle,routestyles,normalize,title):
         if d<dmin:
             ncenter=n
             dmin=d
-
-    maxZenscore = 1.0
-    if(normalize):
-        # Normalize Zenness
-        zenscores = nx.get_edge_attributes(G,'Zenness')
-        maxZenscore = float(max(zenscores.values()))
-        print(maxZenscore)
-
 
     # Generate Lines for Graph Edges
     edge_traces = []
@@ -167,7 +159,7 @@ def networkdisplay(G,routes,graphstyle,routestyles,normalize,title):
 
 # -----------------------------------------------------------------------------------------------------------
 # DESCRIPTION: code below is left in order to use the display operation on a more complex example
-set = 1
+set = 0
 
 if set == 1:
     # Load Network
