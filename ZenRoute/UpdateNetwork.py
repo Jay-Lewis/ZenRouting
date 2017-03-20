@@ -71,11 +71,11 @@ fh.close
 folderpath = os.path.abspath(os.path.join(cwd, '..', 'Project Data','Networks','CstatHistory'))
 weights = [1,1,1]
 maxusages = 1800
-hours = 1
+hours = 0.5
 period = hours*3600     # time in seconds
 start = datetime.now()+timedelta(seconds = 30)
 print('Scheduled Start Time:',str(start))
-iterations = 3
+iterations = 1
 end = start+timedelta(hours=hours*iterations+hours/2.0)
 print('--------Beginning Periodic Update------------')
 periodicupdate(period,start,end,G,weights,folderpath,maxusages)

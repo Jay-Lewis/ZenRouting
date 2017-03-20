@@ -2,7 +2,6 @@ __author__ = 'Justin'
 
 import os
 from os.path import isfile, join
-cwd = os.getcwd()
 import networkx as nx
 from datetime import datetime
 import numpy as np
@@ -11,6 +10,7 @@ from geopy.distance import vincenty as latlondist
 from GetRouteInfo import routeinfo
 from DisplayNetwork import networkdisplay
 import matplotlib.pyplot as plt
+
 
 # Load Networks
 

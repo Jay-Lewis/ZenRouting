@@ -60,8 +60,9 @@ def networkdisplay(G,routes,graphstyle,routestyles,weightstring,maxValue,title):
             color=hexstring,
             ),
         hoverinfo='none',
-        text = str(zenness),
-        mode='lines+text')
+        # text = str(zenness),
+        # mode='lines+text')
+        mode = 'lines')
         edge_traces.append(edge_trace)
 
     # Generate Markers for Graph Nodes
@@ -76,7 +77,7 @@ def networkdisplay(G,routes,graphstyle,routestyles,weightstring,maxValue,title):
             colorscale=graphstyle,
             reversescale=False,
             color=[],
-            size=10,
+            size=5,
             colorbar=dict(
                 thickness=15,
                 title=weightstring+'Metric',
@@ -103,7 +104,7 @@ def networkdisplay(G,routes,graphstyle,routestyles,weightstring,maxValue,title):
             approx_zenness = zenness/len(neighbors)
         node_trace['marker']['color'].append(approx_zenness)
         node_info = 'Approx. '+weightstring+':'+str(approx_zenness)
-        node_trace['text'].append(node_info)
+        # node_trace['text'].append(node_info)
 
 
     # II) -Generate Route Graphical Data--------------------
