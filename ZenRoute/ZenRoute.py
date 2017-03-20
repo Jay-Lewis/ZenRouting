@@ -9,6 +9,7 @@ from ZenScore import zenscore
 from random import choice
 from geopy.distance import vincenty as latlondist
 import geojson
+from DisplayNetwork import networkdisplay
 
 # DESCRIPTION: This script will generate the ideal ZenRoute based on a user's desired factor weights
 #
@@ -65,17 +66,28 @@ lons = nx.get_node_attributes(G,'lon')
 lats = nx.get_node_attributes(G,'lat')
 
 nodesdist = 0
-while(nodesdist < distancelimit):
+connected = False
+while(nodesdist < distancelimit or not(connected)):
     randomnodes = [choice(G.nodes()),choice(G.nodes())]
     origin = randomnodes[0]
     destination = randomnodes[1]
     nodesdist = latlondist([lats[origin],lons[origin]],[lats[destination],lons[destination]]).miles
+    if nx.has_path(G,origin,destination):
+        connected = True
+    else:
+        connected = False
 
 print('Source:',[lats[randomnodes[0]],lons[randomnodes[0]]])
 print('Destination',[lats[randomnodes[1]],lons[randomnodes[1]]])
 
 # Djkistra's Shortest Path
 path = nx.shortest_path(G,source = randomnodes[0],target = randomnodes[1],weight = 'weight')
+
+# IV) Plot Network and Routes
+routestyles = [{'color':' #ccffcc','width':12}]       # greenish
+zenMAX = max(nx.get_edge_attributes(G,'Zenness').values())
+networkdisplay(G,routes=[path],graphstyle='RdYlBu_r',routestyles = routestyles,
+               weightstring='Zenness',maxValue=zenMAX, title='Example')
 
 
 # Export Route

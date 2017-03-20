@@ -8,7 +8,6 @@ from apscheduler.schedulers.blocking import BlockingScheduler
 import os
 cwd = os.getcwd()
 kd_root= os.path.abspath(os.path.join(cwd, '..', 'Project Data','Keydata'))
-import gmapsKeys
 import networkx as nx
 from datetime import datetime
 
@@ -67,38 +66,18 @@ fh=open(filepath,'rb')
 G = nx.read_gexf(fh)
 fh.close
 
-print(len(G.edges()))
-print(len(G.nodes()))
-
 
 # Periodic Network Load
 folderpath = os.path.abspath(os.path.join(cwd, '..', 'Project Data','Networks','CstatHistory'))
 weights = [1,1,1]
 maxusages = 1800
-hours = 1
+hours = 0.5
 period = hours*3600     # time in seconds
 start = datetime.now()+timedelta(seconds = 30)
 print('Scheduled Start Time:',str(start))
-iterations = 3
+iterations = 1
 end = start+timedelta(hours=hours*iterations+hours/2.0)
 print('--------Beginning Periodic Update------------')
 periodicupdate(period,start,end,G,weights,folderpath,maxusages)
 
-
-
-
-
-# Way in which to grab the time from filename
-# myDate = datetime.strptime(datestring,"%Y-%m-%d %H:%M:%S")
-# myDate = datetime.strptime(datestring,"%H-%M(%d-%m-%Y)")
-
-# cwd = os.getcwd()
-# folderpath = os.path.abspath(os.path.join(cwd, '..', 'Project Data','Networks','CstatHistory'))
-# files = [f for f in os.listdir(folderpath) if isfile(join(folderpath, f))]
-# filepath = os.path.abspath(os.path.join(cwd,folderpath,files[0]))
-# fh2=open(filepath,'rb')
-# H = nx.read_gexf(fh2)
-# print(H.edges()[0])
-# fh2.close
-# print(H.graph)
 

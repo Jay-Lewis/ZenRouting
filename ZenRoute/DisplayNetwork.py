@@ -22,12 +22,11 @@ def rgb_to_hex(rgb):
 #
 # Outpus:
 
-def networkdisplay(G,routes,graphstyle,routestyles,normalize,title):
+def networkdisplay(G,routes,graphstyle,routestyles,weightstring,maxValue,title):
 
     # I) -Generate Network 'G' Graphical Data--------------------
 
     # Get Color Map
-    # good color options: ['YlOrRd','RdYlGn_r','RdYlBu_r','coolwarm','hist_heat_r','reds','greens','blues']
     colormap = plt.get_cmap(graphstyle)
 
     # Get Node Positions
@@ -41,14 +40,6 @@ def networkdisplay(G,routes,graphstyle,routestyles,normalize,title):
             ncenter=n
             dmin=d
 
-    maxZenscore = 1.0
-    if(normalize):
-        # Normalize Zenness
-        zenscores = nx.get_edge_attributes(G,'Zenness')
-        maxZenscore = float(max(zenscores.values()))
-        print(maxZenscore)
-
-
     # Generate Lines for Graph Edges
     edge_traces = []
     for edge in G.edges():
@@ -56,8 +47,8 @@ def networkdisplay(G,routes,graphstyle,routestyles,normalize,title):
         y0 = G.node[edge[0]]['lat']
         x1 = G.node[edge[1]]['lon']
         y1 = G.node[edge[1]]['lat']
-        zenness = G[edge[0]][edge[1]]['Zenness']
-        rgb = tuple([int(value*255) for value in colormap(zenness/maxZenscore)[0:3]])
+        zenness = G[edge[0]][edge[1]][weightstring]
+        rgb = tuple([int(value*255) for value in colormap(zenness/maxValue)[0:3]])
         hexstring = rgb_to_hex(rgb)
 
         edge_trace = Scatter(
@@ -69,7 +60,9 @@ def networkdisplay(G,routes,graphstyle,routestyles,normalize,title):
             color=hexstring,
             ),
         hoverinfo='none',
-        mode='lines')
+        # text = str(zenness),
+        # mode='lines+text')
+        mode = 'lines')
         edge_traces.append(edge_trace)
 
     # Generate Markers for Graph Nodes
@@ -84,10 +77,10 @@ def networkdisplay(G,routes,graphstyle,routestyles,normalize,title):
             colorscale=graphstyle,
             reversescale=False,
             color=[],
-            size=10,
+            size=5,
             colorbar=dict(
                 thickness=15,
-                title='Zenness Metric',
+                title=weightstring+'Metric',
                 xanchor='left',
                 titleside='right'
             ),
@@ -107,11 +100,12 @@ def networkdisplay(G,routes,graphstyle,routestyles,normalize,title):
         neighbors = G.neighbors(node)
         if(len(neighbors)>0):
             for neighbor in neighbors:
-                zenness += G[node][neighbor]['Zenness']/maxZenscore
+                zenness += G[node][neighbor][weightstring]/maxValue
             approx_zenness = zenness/len(neighbors)
         node_trace['marker']['color'].append(approx_zenness)
-        node_info = 'Approx. Zenness: '+str(approx_zenness)
-        node_trace['text'].append(node_info)
+        node_info = 'Approx. '+weightstring+':'+str(approx_zenness)
+        # node_trace['text'].append(node_info)
+
 
     # II) -Generate Route Graphical Data--------------------
     route_traces = []
@@ -167,7 +161,7 @@ def networkdisplay(G,routes,graphstyle,routestyles,normalize,title):
 
 # -----------------------------------------------------------------------------------------------------------
 # DESCRIPTION: code below is left in order to use the display operation on a more complex example
-set = 1
+set = 0
 
 if set == 1:
     # Load Network
