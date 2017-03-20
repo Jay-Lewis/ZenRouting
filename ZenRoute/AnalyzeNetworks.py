@@ -83,6 +83,8 @@ for G in Graphs:
 # Plot Zen Relevance vs. Average Congestion
 
 plt.scatter(averageCongestion,averageZenRatio,s=10)
+plt.xlabel('Average Congestion')
+plt.ylabel('Zen Relevance')
 plt.show()
 
 # Plot Zenness Histograms
