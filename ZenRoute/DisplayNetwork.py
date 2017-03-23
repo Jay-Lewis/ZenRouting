@@ -22,7 +22,7 @@ def rgb_to_hex(rgb):
 #
 # Outpus:
 
-def networkdisplay(G,routes,graphstyle,routestyles,weightstring,maxValue,title):
+def networkdisplay(G,routes,graphstyle,routestyles,weightstring,normValue,title):
 
     # I) -Generate Network 'G' Graphical Data--------------------
 
@@ -47,20 +47,22 @@ def networkdisplay(G,routes,graphstyle,routestyles,weightstring,maxValue,title):
         y0 = G.node[edge[0]]['lat']
         x1 = G.node[edge[1]]['lon']
         y1 = G.node[edge[1]]['lat']
-        zenness = G[edge[0]][edge[1]][weightstring]
-        rgb = tuple([int(value*255) for value in colormap(zenness/maxValue)[0:3]])
+        weight = G[edge[0]][edge[1]][weightstring]/normValue
+        if(weight > 1.0):
+            weight = 1.0
+        rgb = tuple([int(value*255) for value in colormap(weight)[0:3]])
         hexstring = rgb_to_hex(rgb)
 
         edge_trace = Scatter(
         x=(x0, x1),
         y=(y0, y1),
         line=Line(
-            width=0.75,
+            width=1.0,
             reversescale=True,
             color=hexstring,
             ),
         hoverinfo='none',
-        # text = str(zenness),
+        # text = str(weight),
         # mode='lines+text')
         mode = 'lines')
         edge_traces.append(edge_trace)
@@ -94,16 +96,18 @@ def networkdisplay(G,routes,graphstyle,routestyles,weightstring,maxValue,title):
         node_trace['x'].append(x)
         node_trace['y'].append(y)
 
-        # Zenness Information
-        zenness = 0
-        approx_zenness = 0
+        # weight Information
+        approx_weight = 0
         neighbors = G.neighbors(node)
         if(len(neighbors)>0):
             for neighbor in neighbors:
-                zenness += G[node][neighbor][weightstring]/maxValue
-            approx_zenness = zenness/len(neighbors)
-        node_trace['marker']['color'].append(approx_zenness)
-        node_info = 'Approx. '+weightstring+':'+str(approx_zenness)
+                subweight = G[node][neighbor][weightstring]/normValue
+                if(subweight > 1.0):
+                    subweight=1.0
+                approx_weight += subweight
+            approx_weight = approx_weight/len(neighbors)
+        node_trace['marker']['color'].append(approx_weight)
+        node_info = 'Approx. '+weightstring+':'+str(approx_weight)
         # node_trace['text'].append(node_info)
 
 
@@ -132,6 +136,22 @@ def networkdisplay(G,routes,graphstyle,routestyles,weightstring,maxValue,title):
         route_traces.append(route_trace)
 
 
+    # zoom to routes
+    lons = nx.get_node_attributes(G,'lon')
+    lats = nx.get_node_attributes(G,'lat')
+    sublons =[]
+    sublats = []
+
+    for route in routes:
+        for node in route:
+            sublons.append(lons[node])
+            sublats.append(lats[node])
+
+
+    xmin = min(sublons)-.005; xmax = max(sublons)+.005
+    ymin = min(sublats)-.005; ymax = max(sublats)+.005
+
+
     # III) -Plot All Graphical Data--------------------
     graphicalData = route_traces+[node_trace]+edge_traces
     # graphicalData = route_traces+edge_traces
@@ -147,8 +167,8 @@ def networkdisplay(G,routes,graphstyle,routestyles,weightstring,maxValue,title):
                         showarrow=False,
                         xref="paper", yref="paper",
                         x=0.005, y=-0.002 ) ],
-                    xaxis=XAxis(showgrid=False, zeroline=False, showticklabels=False),
-                    yaxis=YAxis(showgrid=False, zeroline=False, showticklabels=False)))
+                    xaxis=XAxis(showgrid=False, zeroline=False, showticklabels=False,range=[xmin,xmax]),
+                    yaxis=YAxis(showgrid=False, zeroline=False, showticklabels=False,range=[ymin,ymax])))
 
     plot(fig, filename='networkx.html')
 

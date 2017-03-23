@@ -9,19 +9,70 @@ import googlemaps
 from datetime import datetime
 from datetime import timedelta
 from DisplayNetwork import networkdisplay
+from numpy import linspace,average
+import matplotlib.pyplot as plt
 
 
 
-cwd = os.getcwd()
-folderpath = os.path.abspath(os.path.join(cwd, '..', 'Project Data','Networks','CstatHistory'))
-files = [f for f in os.listdir(folderpath) if isfile(join(folderpath, f))]
-print(files)
-for filename in files:
-    filepath = os.path.abspath(os.path.join(cwd,folderpath,filename))
-    fh2=open(filepath,'rb')
-    H = nx.read_gexf(fh2)
-    networkdisplay(H,[],'RdYlBu_r',[])
-    fh2.close
+
+
+
+values = [0.55, 0.6000000000000001, 0.6500000000000001, 0.7000000000000002, 0.7500000000000002, 0.7000000000000002, 0.7000000000000002, 0.7500000000000002, 0.8000000000000003, 0.8000000000000003, 0.8500000000000003, 0.9000000000000004, 0.8500000000000003, 0.9000000000000004, 0.9500000000000004, 0.9000000000000004, 0.8500000000000003, 0.9000000000000004, 0.8500000000000003, 0.9000000000000004, 0.9500000000000004, 0.9000000000000004, 0.8500000000000003, 0.8000000000000003, 0.7500000000000002]
+
+print(average(values[9:-1]))
+plt.plot(linspace(1,len(values),len(values)),values)
+plt.show()
+
+
+
+
+
+
+
+
+
+
+
+# maxusages = 10
+#
+# # Load API Keys
+# keys_str = os.path.abspath(os.path.join(kd_root,'keys.txt'))
+# keyusages_str = os.path.abspath(os.path.join(kd_root,'keyusages.txt'))
+# keydates_str = os.path.abspath(os.path.join(kd_root,'keydates.txt'))
+# APIkeys = gmapsKeys.keys(keys_str,keyusages_str,keydates_str,maxusages)
+#
+# while(True):
+#     newkey = APIkeys.getKey(1)
+#     print(newkey)
+#     APIkeys.setDefective(newkey,10)
+#     newkey = APIkeys.getKey(1)
+#     print(newkey)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# cwd = os.getcwd()
+# folderpath = os.path.abspath(os.path.join(cwd, '..', 'Project Data','Networks','CstatHistory'))
+# files = [f for f in os.listdir(folderpath) if isfile(join(folderpath, f))]
+# print(files)
+# for filename in files:
+#     filepath = os.path.abspath(os.path.join(cwd,folderpath,filename))
+#     fh2=open(filepath,'rb')
+#     H = nx.read_gexf(fh2)
+#     networkdisplay(H,[],'RdYlBu_r',[])
+#     fh2.close
 
 
 

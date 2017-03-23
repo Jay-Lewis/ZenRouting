@@ -12,7 +12,7 @@ __author__ = 'Justin'
 
 
 
-from datetime import datetime
+from datetime import datetime,timedelta
 from random import choice
 
 class keys:
@@ -33,7 +33,7 @@ class keys:
             dates = [tuple(map(int, i.split(','))) for i in h]
         for keystring,usage,date in zip(keystrings,usages,dates):
             self.keysdict[keystring] = key(keystring,usage,date)
-        self.updateAllKeys()
+        self.dateCheck()
 
     def updateKey(self,keystring,amount):
         currentkey = self.keysdict[keystring]
@@ -45,7 +45,7 @@ class keys:
             currentkey.usage = 0
             currentkey.date = currentdate
 
-    def updateAllKeys(self):
+    def dateCheck(self):
         now = datetime.now()
         currentdate = [now.day,now.month,now.year]
         for keystring,currentkey in self.keysdict.items():
@@ -54,22 +54,19 @@ class keys:
                 currentkey.date = currentdate
 
     def getKey(self,usage):
-        maxiter = 100
-        iter = 0
-        while(iter < maxiter):
-            keystring = choice(self.keysdict.keys())
-            currentkey = self.keysdict[keystring]
-            if(currentkey.pause > 0):
-                currentkey.pause -= 1
-                print('minus 1')
-            else:
-                if(currentkey.usage < self.maxusage):
+        while(True):
+            for keystring in self.keysdict.keys():
+                currentkey = self.keysdict[keystring]
+                if(currentkey.starttime < datetime.now() and currentkey.usage < self.maxusage):
                     self.updateKey(currentkey.name,usage)
                     return currentkey.name
-                iter+=1
 
-    def setDefective(self,keystring,amount):
-        self.keysdict[keystring].pause += amount
+    def setDefective(self,keystring,seconds):
+        self.keysdict[keystring].starttime = datetime.now() + timedelta(seconds = seconds)
+        print('----------------')
+        print('Defective Key: '+keystring)
+        print('Starttime: '+str(self.keysdict[keystring].starttime))
+        print('----------------')
 
     def printKeys(self):
         for keystring in self.keysdict:
@@ -98,7 +95,7 @@ class key:
         now = datetime.now()
         self.name = string
         self.date = [now.day,now.month,now.year]
-        self.pause = 0
+        self.starttime = now
         if(pastdate != (now.day,now.month,now.year)):
             self.usage = 0
         else:

@@ -5,9 +5,8 @@ from os.path import isfile, join
 import networkx as nx
 from datetime import datetime
 import numpy as np
-from random import choice
-from geopy.distance import vincenty as latlondist
 from GetRouteInfo import routeinfo
+from GenRandomNodes import randomnodes
 from DisplayNetwork import networkdisplay
 import matplotlib.pyplot as plt
 
@@ -50,27 +49,13 @@ for G in Graphs:
     Zenratio = []
     for index in range(1,maxiter,1):
         # Generate Source and Destination
-        distancelimit = 3   # distance in miles
-        lons = nx.get_node_attributes(G,'lon')
-        lats = nx.get_node_attributes(G,'lat')
-
-        nodesdist = 0
-        connected = False
-        while(nodesdist < distancelimit or not(connected)):
-            randomnodes = [choice(G.nodes()),choice(G.nodes())]
-            origin = randomnodes[0]
-            destination = randomnodes[1]
-            nodesdist = latlondist([lats[origin],lons[origin]],[lats[destination],lons[destination]]).miles
-            if nx.has_path(G,origin,destination):
-                connected = True
-            else:
-                connected = False
+        origin,destination = randomnodes(G,distancelimit=3) # distancelimit in miles
 
         # Zen Route
-        Zenpath = nx.shortest_path(G,source = randomnodes[0],target = randomnodes[1],weight = 'weight')
+        Zenpath = nx.shortest_path(G,source = origin,target = destination,weight = 'weight')
         ZenpathInfo = routeinfo(G,Zenpath,['Zenness','currenttime'])
         # Fastest Route
-        Fastpath = nx.shortest_path(G,source = randomnodes[0],target = randomnodes[1],weight = 'currenttime')
+        Fastpath = nx.shortest_path(G,source = origin,target = destination,weight = 'currenttime')
         FastpathInfo = routeinfo(G,Fastpath,['Zenness','currenttime'])
 
         ZenDiff = FastpathInfo['Zenness']-ZenpathInfo['Zenness']

@@ -36,7 +36,7 @@ if set == 1:
 
 #Generate Number of Pareto Frontier Graphs
 
-numiterations = 4
+numiterations = 6
 for i in range(0,numiterations,1):
 
     # Loop Until Enough Pareto Optimal Points Found
@@ -102,6 +102,9 @@ for i in range(0,numiterations,1):
 
     # Plot Pareto Frontier
     fig,ax = plt.subplots()
+    print(min(time_pts))
+    MIN = min(time_pts)
+    time_pts[:]=[value/MIN for value in time_pts]   # Normalize time to minimum value
     ax.scatter(Zenscore_pts,time_pts,s=10)
     arr,unique_indices = np.unique(Zenscore_pts,return_index=True)
 
@@ -112,7 +115,7 @@ for i in range(0,numiterations,1):
     #     ax.annotate(annotation,(Zen,t))
 
     plt.xlabel('Zenscores')
-    plt.ylabel('Times (s)')
+    plt.ylabel('Times (Normalized to MIN)')
     # plt.xlim([0,2500])
     # plt.ylim([0,2500])
 
