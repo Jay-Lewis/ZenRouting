@@ -1,217 +1,58 @@
 
 import os
-from os.path import isfile, join
 cwd = os.getcwd()
 kd_root= os.path.abspath(os.path.join(cwd, '..', 'Project Data','Keydata'))
-import gmapsKeys
-import networkx as nx
-import googlemaps
-from datetime import datetime
-from datetime import timedelta
-from DisplayNetwork import networkdisplay
-from numpy import linspace,average
 import matplotlib.pyplot as plt
+import matplotlib.patches as mpatches
+from numpy import mean
+import networkx as nx
 
 
+# Print Histogram of Zen Scores
+
+# Load Network
+cwd = os.getcwd()
+filename = "OSMNetworkReducedSet.gexf"
+filepath = os.path.abspath(os.path.join(cwd, '..', 'Project Data','Networks',filename))
+fh=open(filepath,'rb')
+G = nx.read_gexf(fh)
 
 
-
-
-values = [0.55, 0.6000000000000001, 0.6500000000000001, 0.7000000000000002, 0.7500000000000002, 0.7000000000000002, 0.7000000000000002, 0.7500000000000002, 0.8000000000000003, 0.8000000000000003, 0.8500000000000003, 0.9000000000000004, 0.8500000000000003, 0.9000000000000004, 0.9500000000000004, 0.9000000000000004, 0.8500000000000003, 0.9000000000000004, 0.8500000000000003, 0.9000000000000004, 0.9500000000000004, 0.9000000000000004, 0.8500000000000003, 0.8000000000000003, 0.7500000000000002]
-
-print(average(values[9:-1]))
-plt.plot(linspace(1,len(values),len(values)),values)
+fig,ax = plt.subplots()
+zenscores = nx.get_edge_attributes(G,'Zenness').values()
+# hist = numpy.histogram(values)
+zenrange = [0,800]
+ax.hist(zenscores,range=zenrange,bins = 50)
+plt.title('Zenscore Histogram')
+plt.xlabel('Zenscore')
+plt.ylabel('Probability')
 plt.show()
 
 
 
 
+# Print Justin and Pablo's User Weights
 
+weights = [0.55, 0.5, 0.55, 0.6000000000000001, 0.55, 0.55, 0.5, 0.45, 0.4, 0.4, 0.45, 0.45, 0.45, 0.5, 0.5, 0.45, 0.45, 0.5, 0.55, 0.55, 0.5, 0.55, 0.5, 0.5, 0.45, 0.45, 0.4, 0.4, 0.45, 0.5, 0.5, 0.5, 0.55, 0.55]
+plt.plot(range(1,len(weights)+1,1),weights)
+plt.xlabel('Iteration')
+plt.ylabel('Zen Weight')
+pablo_avg = mean(weights[5:-1])
 
 
+weights = [0.55, 0.55, 0.6000000000000001, 0.55, 0.6000000000000001, 0.6500000000000001, 0.7000000000000002, 0.6500000000000001, 0.6000000000000001, 0.6500000000000001, 0.7000000000000002, 0.6500000000000001, 0.6500000000000001, 0.6000000000000001, 0.6000000000000001, 0.6500000000000001, 0.7000000000000002, 0.6500000000000001, 0.6000000000000001, 0.6000000000000001, 0.6500000000000001, 0.6000000000000001, 0.6500000000000001, 0.6500000000000001, 0.6000000000000001, 0.6000000000000001, 0.6500000000000001, 0.7000000000000002, 0.6500000000000001, 0.6500000000000001, 0.7000000000000002, 0.6500000000000001, 0.6000000000000001, 0.6000000000000001, 0.6500000000000001]
+plt.plot(range(1,len(weights)+1,1),weights)
+plt.xlabel('Iteration')
+plt.ylabel('Zen Weight')
+plt.title("Weight Regression")
+justin_avg = mean(weights[5:-1])
 
+pablo_patch = mpatches.Patch(color='blue', label="Pablo")
+justin_patch = mpatches.Patch(color='green', label='Justin')
+plt.legend(handles = [pablo_patch,justin_patch])
 
+plt.plot(range(1,len(weights)+1,1),[pablo_avg for x in range(1,len(weights)+1,1)],'--',color='#737373')
+plt.plot(range(1,len(weights)+1,1),[justin_avg for x in range(1,len(weights)+1,1)],'--',color='#737373')
 
-
-# maxusages = 10
-#
-# # Load API Keys
-# keys_str = os.path.abspath(os.path.join(kd_root,'keys.txt'))
-# keyusages_str = os.path.abspath(os.path.join(kd_root,'keyusages.txt'))
-# keydates_str = os.path.abspath(os.path.join(kd_root,'keydates.txt'))
-# APIkeys = gmapsKeys.keys(keys_str,keyusages_str,keydates_str,maxusages)
-#
-# while(True):
-#     newkey = APIkeys.getKey(1)
-#     print(newkey)
-#     APIkeys.setDefective(newkey,10)
-#     newkey = APIkeys.getKey(1)
-#     print(newkey)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# cwd = os.getcwd()
-# folderpath = os.path.abspath(os.path.join(cwd, '..', 'Project Data','Networks','CstatHistory'))
-# files = [f for f in os.listdir(folderpath) if isfile(join(folderpath, f))]
-# print(files)
-# for filename in files:
-#     filepath = os.path.abspath(os.path.join(cwd,folderpath,filename))
-#     fh2=open(filepath,'rb')
-#     H = nx.read_gexf(fh2)
-#     networkdisplay(H,[],'RdYlBu_r',[])
-#     fh2.close
-
-
-
-
-
-
-
-
-
-
-
-
-
-# start = datetime.now()+timedelta(seconds=15)
-# hours = 1
-# iterations = 1
-# end = start+timedelta(hours=hours*iterations+hours/2.0)
-# print(float(hours*iterations)+hours/2.0)
-# print(str(start))
-# print(str(end))
-#
-# filename = "OSMNetworkReducedSet.gexf"
-# filepath = os.path.abspath(os.path.join(cwd, '..', 'Project Data','Networks',filename))
-# fh2=open(filepath,'rb')
-# H = nx.read_gexf(fh2)
-# edge = H.edges()[3]
-# print(H[edge[0]][edge[1]]['currenttime'])
-#
-# cwd = os.getcwd()
-# folderpath = os.path.abspath(os.path.join(cwd, '..', 'Project Data','Networks','CstatHistory'))
-# files = [f for f in os.listdir(folderpath) if isfile(join(folderpath, f))]
-# print(files)
-# for filename in files:
-#     filepath = os.path.abspath(os.path.join(cwd,folderpath,filename))
-#     fh2=open(filepath,'rb')
-#     H = nx.read_gexf(fh2)
-#     edge = H.edges()[3]
-#     print(H[edge[0]][edge[1]]['currenttime'])
-#     fh2.close
-
-
-
-
-
-
-
-
-
-
-
-# Way in which to grab the time from filename
-# datestring = "0-27(8-3-2017)"
-# myDate = datetime.strptime(datestring,"%H-%M(%d-%m-%Y)")
-# print(myDate)
-
-# maxusages = 10
-#
-# # Load API Keys
-# keys_str = os.path.abspath(os.path.join(kd_root,'keys.txt'))
-# keyusages_str = os.path.abspath(os.path.join(kd_root,'keyusages.txt'))
-# keydates_str = os.path.abspath(os.path.join(kd_root,'keydates.txt'))
-# APIkeys = gmapsKeys.keys(keys_str,keyusages_str,keydates_str,maxusages)
-#
-# for i in range(0,5):
-#     newkey = APIkeys.getKey(1)
-#     print(newkey)
-#
-# APIkeys.setDefective(newkey,5)
-# print('defective key',newkey)
-#
-# for i in range(0,10):
-#     newkey = APIkeys.getKey(1)
-#     print(newkey)
-
-
-
-
-
-
-
-
-
-# __author__ = 'Justin'
-#
-# import os
-# import networkx as nx
-#
-# # Load Network
-# cwd = os.getcwd()
-# filename = "OSMNetworkReduced.gexf"
-# filepath = os.path.abspath(os.path.join(cwd, '..', 'Project Data','Networks',filename))
-# print(filepath)
-#
-# fh=open(filepath,'rb')
-# G = nx.read_gexf(fh)
-# fh.close
-#
-# cwd = os.getcwd()
-# filename = "OSMNetwork.gexf"
-# filepath = os.path.abspath(os.path.join(cwd, '..', 'Project Data','Networks',filename))
-# print(filepath)
-#
-# fh=open(filepath,'rb')
-# H = nx.read_gexf(fh)
-# fh.close
-#
-#
-# print(len(G.nodes()))
-#
-# print(len(H.nodes()))
-
-
-
-
-
-
-
-import matplotlib.lines as lines
-import matplotlib.pyplot as plt
-from matplotlib.lines import Line2D
-# fig, ax = plt.subplots()
-#
-# fig.set_size_inches(6,6)          # Make graph square
-# plt.scatter([-0.1],[-0.1],s=0.01)     # Move graph window a little left and down
-#
-# line1 = [(0,0), (1,0)]
-# line2 = [(0,0), (0,1)]
-#
-# # Note that the Line2D takes a list of x values and a list of y values,
-# # not 2 points as one might expect.  So we have to convert our points
-# # an x-list and a y-list.
-# (line1_xs, line1_ys) = zip(*line1)
-# (line2_xs, line2_ys) = zip(*line2)
-#
-# ax.add_line(Line2D(line1_xs, line1_ys, linewidth=2, color='blue'))
-# ax.add_line(Line2D(line2_xs, line2_ys, linewidth=2, color='red'))
-#
-# print(line1_xs)
-# print(line1_ys)
-# plt.plot()
-# plt.show()
+plt.show()
 

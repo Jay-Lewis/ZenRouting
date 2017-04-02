@@ -6,7 +6,7 @@ import networkx as nx
 from datetime import datetime
 import numpy as np
 from GetRouteInfo import routeinfo
-from GenRandomNodes import randomnodes
+from GenRandomNodes import randompairs
 from DisplayNetwork import networkdisplay
 import matplotlib.pyplot as plt
 
@@ -40,16 +40,19 @@ for filename in files:
 # Zen Relevance vs. Average Congestion
 averageCongestion = []
 averageZenRatio = []
-maxiter = 800
+numpairs = 2000
 
+
+# Choose Random Source and Destination Pairs
+randpairs = randompairs(G,numpairs,distancelimit=3)  # distancelimit in miles
 for G in Graphs:
     zenscores = nx.get_edge_attributes(G,'Zenness').values()
     averageCongestion.append(np.mean(zenscores))
 
     Zenratio = []
-    for index in range(1,maxiter,1):
-        # Generate Source and Destination
-        origin,destination = randomnodes(G,distancelimit=3) # distancelimit in miles
+    for pair in randpairs:
+        # Set Origin and Destination
+        origin = pair[0]; destination = pair[1]
 
         # Zen Route
         Zenpath = nx.shortest_path(G,source = origin,target = destination,weight = 'weight')
@@ -62,7 +65,6 @@ for G in Graphs:
         TimeDiff = ZenpathInfo['currenttime']-FastpathInfo['currenttime']
         if(TimeDiff != 0):
             Zenratio.append(ZenDiff/TimeDiff)
-
     averageZenRatio.append(np.mean(Zenratio))
 
 # Plot Zen Relevance vs. Average Congestion

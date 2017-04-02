@@ -70,10 +70,10 @@ fh.close
 # Periodic Network Load
 folderpath = os.path.abspath(os.path.join(cwd, '..', 'Project Data','Networks','CstatHistory'))
 weights = [1,1,1]
-maxusages = 600
-hours = 0.5
+maxusages = 1000
+hours = 1
 period = hours*3600     # time in seconds
-start = datetime.now()+timedelta(seconds = 30)
+start = datetime.now()+timedelta(seconds = 40)
 print('Scheduled Start Time:',str(start))
 iterations = 1
 end = start+timedelta(hours=hours*iterations+hours/2.0)

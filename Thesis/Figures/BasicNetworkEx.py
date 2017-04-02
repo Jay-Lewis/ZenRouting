@@ -58,6 +58,15 @@ nx.draw_networkx_edge_labels(G1,pos = positions,edge_labels = edge_labels,font_s
 plt.show()
 
 
+
+
+
+
+
+
+
+
+
 # # Load Network
 # cwd = os.getcwd()
 # filename = "OSMNetworkReducedSet.gexf"

@@ -78,3 +78,6 @@ for edge in G1.edges():
 
 nx.draw_networkx_edge_labels(G1,pos = positions,edge_labels = edge_labels,font_size = 14)
 plt.show()
+
+
+

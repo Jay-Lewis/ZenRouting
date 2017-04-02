@@ -20,9 +20,8 @@ import matplotlib.pyplot as plt
 # Initialize User Weights
 zenWeight = 0.5
 timeWeight = 1-zenWeight
-# print('Enter your first name: ')
-# person = sys.stdin.readline()[0:-1]
-person = 'Justin'
+print('Enter your first name: ')
+person = sys.stdin.readline()[0:-1]
 
 # Load Network
 cwd = os.getcwd()
@@ -35,7 +34,7 @@ userweight_history = []
 pathinfo_history = []
 choice_history = []
 
-numiter = 25
+numiter = 35
 weight_delta = 0.05
 
 #-- User Weight Testing Loop-----------------------------------------------------
@@ -78,7 +77,8 @@ for itercount in linspace(1,numiter,numiter):
 
 
     # IV) Plot Network and Routes
-    routestyles = [{'color':' #ccffcc','width':20},{'color':' #ffff4d','width':10}]       # greenish then yellowish
+    routestyles = [{'color': '#ccffcc','width': 20,'name': 'Zen Route'},
+                   {'color': '#ffff4d','width': 10,'name': 'Fastest Route'}]       # greenish then yellowish
     Zen_std = std(nx.get_edge_attributes(G,'Zenness').values())
 
     networkdisplay(G,routes=[zenRoute,fastestRoute],graphstyle='RdYlBu_r',routestyles = routestyles,

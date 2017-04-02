@@ -4,8 +4,9 @@ import os
 import matplotlib.pyplot as plt
 from plotly.graph_objs import *
 import networkx as nx
-from plotly.offline import download_plotlyjs, init_notebook_mode, plot, iplot
+from plotly.offline import  plot
 from plotly.graph_objs import Scatter, Figure, Layout
+import matplotlib.patches as mpatches
 
 # Convert RGB tuple to hex
 def rgb_to_hex(rgb):
@@ -170,7 +171,16 @@ def networkdisplay(G,routes,graphstyle,routestyles,weightstring,normValue,title)
                     xaxis=XAxis(showgrid=False, zeroline=False, showticklabels=False,range=[xmin,xmax]),
                     yaxis=YAxis(showgrid=False, zeroline=False, showticklabels=False,range=[ymin,ymax])))
 
+    # Plot Legend
+    # patches = []
+    # for routestyle in routestyles:
+    #     patch = mpatches.Patch(color=routestyle['color'], label=routestyle['name'])
+    #     patches.append(patch)
+    # fig.legend(handles = patches)
+
     plot(fig, filename='networkx.html')
+
+
 
 
 
@@ -330,3 +340,4 @@ if set == 1:
                     yaxis=YAxis(showgrid=False, zeroline=False, showticklabels=False)))
 
     plot(fig, filename='networkx.html')
+

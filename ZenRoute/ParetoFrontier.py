@@ -116,8 +116,8 @@ for i in range(0,numiterations,1):
 
     plt.xlabel('Zenscores')
     plt.ylabel('Times (Normalized to MIN)')
-    # plt.xlim([0,2500])
-    # plt.ylim([0,2500])
+    plt.ylim([0,3])
+    plt.xlim([0,2200])
 
 # Show All Graphs at Once
 plt.show()

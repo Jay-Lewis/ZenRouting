@@ -25,3 +25,11 @@ def randomnodes(G,distancelimit,print_=False):
             print('Destination',[lats[destination],lons[destination]])
 
         return origin,destination
+
+def randompairs(G,numpairs,distancelimit):
+    pairs = []
+    for index in range(1,numpairs,1):
+        origin,destination = randomnodes(G,distancelimit)
+        pair = [origin,destination]
+        pairs.append(pair)
+    return pairs
