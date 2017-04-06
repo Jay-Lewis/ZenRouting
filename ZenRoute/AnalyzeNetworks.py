@@ -28,28 +28,21 @@ for filename in files:
     Graphs.append(G)
 
 
-# Find Normalization Factor
-# maxZenscore = 1
-# maxs = []
-# for G in Graphs:
-#     zenscores = nx.get_edge_attributes(G,'Zenness').values()
-#     MAX = float(max(zenscores))
-#     maxs.append(MAX)
-# maxZenscore = max(maxs)
-
 # Zen Relevance vs. Average Congestion
 averageCongestion = []
 averageZenRatio = []
-numpairs = 2000
-
+averageZenDiff = []
+numpairs = 1000
 
 # Choose Random Source and Destination Pairs
 randpairs = randompairs(G,numpairs,distancelimit=3)  # distancelimit in miles
+
+# Calculate Average Zen Ratio for each network slice
 for G in Graphs:
     zenscores = nx.get_edge_attributes(G,'Zenness').values()
-    averageCongestion.append(np.mean(zenscores))
 
-    Zenratio = []
+    Zenratio = 0
+    ZenDiffs = 0
     for pair in randpairs:
         # Set Origin and Destination
         origin = pair[0]; destination = pair[1]
@@ -63,15 +56,27 @@ for G in Graphs:
 
         ZenDiff = FastpathInfo['Zenness']-ZenpathInfo['Zenness']
         TimeDiff = ZenpathInfo['currenttime']-FastpathInfo['currenttime']
-        if(TimeDiff != 0):
-            Zenratio.append(ZenDiff/TimeDiff)
-    averageZenRatio.append(np.mean(Zenratio))
+
+        if(TimeDiff > 0 and ZenDiff > 0):
+            Zenratio += ZenDiff/TimeDiff
+            ZenDiffs += ZenDiff
+
+    if(Zenratio != 0):
+        averageZenRatio.append(Zenratio/numpairs)
+        averageZenDiff.append(ZenDiffs/numpairs)
+        averageCongestion.append(np.mean(zenscores))
 
 # Plot Zen Relevance vs. Average Congestion
 
+fig,ax = plt.subplots()
 plt.scatter(averageCongestion,averageZenRatio,s=10)
-plt.xlabel('Average Congestion')
-plt.ylabel('Zen Relevance')
+plt.xlabel('Average Network Congestion')
+plt.ylabel('Average Zen/Time Tradeoff')
+
+fig,ax = plt.subplots()
+plt.scatter(averageCongestion,averageZenDiff,s=10)
+plt.xlabel('Average Network Congestion')
+plt.ylabel('Average ZenDiff')
 plt.show()
 
 # Plot Zenness Histograms

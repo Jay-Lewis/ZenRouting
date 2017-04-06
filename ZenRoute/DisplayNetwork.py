@@ -154,8 +154,8 @@ def networkdisplay(G,routes,graphstyle,routestyles,weightstring,normValue,title)
 
 
     # III) -Plot All Graphical Data--------------------
-    graphicalData = route_traces+[node_trace]+edge_traces
-    # graphicalData = route_traces+edge_traces
+    # graphicalData = route_traces+[node_trace]+edge_traces
+    graphicalData = route_traces+edge_traces
     fig = Figure(data=Data(graphicalData),
                  layout=Layout(
                     title='<br>'+title,
@@ -171,14 +171,15 @@ def networkdisplay(G,routes,graphstyle,routestyles,weightstring,normValue,title)
                     xaxis=XAxis(showgrid=False, zeroline=False, showticklabels=False,range=[xmin,xmax]),
                     yaxis=YAxis(showgrid=False, zeroline=False, showticklabels=False,range=[ymin,ymax])))
 
-    # Plot Legend
+    # # Plot Legend
     # patches = []
     # for routestyle in routestyles:
     #     patch = mpatches.Patch(color=routestyle['color'], label=routestyle['name'])
     #     patches.append(patch)
-    # fig.legend(handles = patches)
+    # plt.legend(handles = patches)
 
     plot(fig, filename='networkx.html')
+
 
 
 

@@ -28,7 +28,7 @@ def randomnodes(G,distancelimit,print_=False):
 
 def randompairs(G,numpairs,distancelimit):
     pairs = []
-    for index in range(1,numpairs,1):
+    for index in range(1,numpairs+1,1):
         origin,destination = randomnodes(G,distancelimit)
         pair = [origin,destination]
         pairs.append(pair)
