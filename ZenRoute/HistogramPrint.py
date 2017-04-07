@@ -3,7 +3,7 @@ __author__ = 'Justin'
 import os
 import networkx as nx
 import matplotlib.pyplot as plt
-import numpy
+import numpy as np
 
 # Load Network
 cwd = os.getcwd()
@@ -24,8 +24,20 @@ for edge in G.edges():
     nodeB = edge[1]
     values.append(G[nodeA][nodeB]['Zenness'])
 
-# hist = numpy.histogram(values)
-plt.hist(values)
+
+histinfo = np.histogram(values)
+probs = histinfo[0]
+scores = histinfo[1]
+
+# Normalize
+probs = np.multiply(probs,1.0/sum(probs))
+
+fig,ax = plt.subplots()
+
+print(probs)
+print(scores)
+plt.bar(scores[0:-1],probs,np.diff(scores))
+plt.ylabel('Probability')
+plt.xlabel('ZenScore')
+plt.title('Histogram Plot of Edge Zenness')
 plt.show()
-
-

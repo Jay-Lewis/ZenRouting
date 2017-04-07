@@ -6,7 +6,7 @@ import json
 import networkx as nx
 from WeightFunction import weightfunction
 from PathSimilarity import pathSimilarity as PS
-from numpy import std,linspace,argsort,array,linspace
+from numpy import std,linspace,argsort,array,linspace,unique
 from DisplayNetwork import networkdisplay
 from GetRouteInfo import routeinfo
 from GenRandomNodes import randomnodes
@@ -19,9 +19,9 @@ from random import shuffle
 
 # Initialize data
 numweights = 20
-weights = linspace(0,0.7,numweights)
+weights = linspace(0,1,numweights)
 weightchosen = {weight:0 for weight in weights}
-uniquerange = [4,6]
+uniquerange = [3,5]
 numiter = 30
 
 # Load Network
@@ -42,6 +42,8 @@ for _ in range(0,numiter,1):
     # Print Route Information
     print('------------------------------------------------------------------------------')
     print('/////////////////////////////////////////////////////////////////////////////')
+    Zenscore_pts = []
+    time_pts = []
     for index,path in enumerate(paths):
         print('---------------------------------------')
         print('Route '+str(index)+':')
@@ -51,11 +53,14 @@ for _ in range(0,numiter,1):
         print('-zen diff:',pathsinfo[0]['Zenness']-pathsinfo[index]['Zenness'])
         print('-time diff:',(pathsinfo[index]['currenttime']-pathsinfo[0]['currenttime'])/60)
         print('---------------------------------------')
+        Zenscore_pts.append(pathsinfo[index]['Zenness'])
+        time_pts.append(pathsinfo[index]['currenttime']/60)
 
 
     # Plot All Route Options
     routestyles=[]
-    listcolors = ['#cc9999','#ccff99','#999933','#ffcc99','#996633','#767777']
+    # listcolors = ['#cc9999','#ccff99','#999933','#ffcc99','#996633','#767777']
+    listcolors = ['#ffff4d','#66ff66','#00cd00','#008b00','#006400','#cc9999','#ccff99','#999933']
 
     for index in range(0,len(paths),1):
         dict = {'color': listcolors[index],'width': 10,'name': 'Route '+str(index)+':'}
@@ -63,7 +68,28 @@ for _ in range(0,numiter,1):
 
     Zen_std = std(nx.get_edge_attributes(G,'Zenness').values())
     networkdisplay(G,routes=paths,graphstyle='RdYlBu_r',routestyles = routestyles,
-                   weightstring='Zenness',normValue=6.0*Zen_std, title='Choose a route!')
+                   weightstring='Zenness',normValue=6.0*Zen_std, title='Pareto Optimal Routes')
+
+    # # Plot Pareto Frontier
+    # fig,ax = plt.subplots()
+    # MIN = min(time_pts)
+    # time_pts[:]=[value/MIN for value in time_pts]   # Normalize time to minimum value
+    # ax.scatter(Zenscore_pts,time_pts,s=10)
+    # plt.title('Pareto Frontier Example')
+    # plt.xlabel('Zenscores')
+    # plt.ylabel('Time Normalized to Fastest Route')
+    #
+    # for index,weightgroup in enumerate(cluster_weights):
+    #     if(len(weightgroup)==1):
+    #         a = "%.2f" % weightgroup[0]
+    #         ax.annotate('['+a+']',(Zenscore_pts[index],time_pts[index]))
+    #     else:
+    #         a = "%.2f" % weightgroup[0]
+    #         b = "%.2f" % weightgroup[-1]
+    #         ax.annotate('['+a+'-'+b+']',(Zenscore_pts[index],time_pts[index]))
+    # plt.show()
+
+
 
 
     # Get User Feedback:
@@ -94,7 +120,7 @@ for _ in range(0,numiter,1):
 
         Zen_std = std(nx.get_edge_attributes(G,'Zenness').values())
         networkdisplay(G,routes=chosenpaths,graphstyle='RdYlBu_r',routestyles = routestyles,
-                       weightstring='Zenness',normValue=6.0*Zen_std, title='Choose a route!')
+                       weightstring='Zenness',normValue=6.0*Zen_std, title='Pareto Optimal Routes')
 
         # Get Refined User Feedback:
         print('Options:')

@@ -114,7 +114,7 @@ if(False):
     #Generate Number of Pareto Frontier Graphs
 
     ratios = []
-    numiterations = 3
+    numiterations = 1
     for i in range(0,numiterations,1):
 
         # Loop Until Enough Pareto Optimal Points Found

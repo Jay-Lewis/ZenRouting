@@ -79,8 +79,8 @@ def networkdisplay(G,routes,graphstyle,routestyles,weightstring,normValue,title)
             showscale=True,
             colorscale=graphstyle,
             reversescale=False,
-            color=[],
-            size=5,
+            color='#e8e8e8',
+            size=10,
             colorbar=dict(
                 thickness=15,
                 title=weightstring+'Metric',
@@ -107,7 +107,7 @@ def networkdisplay(G,routes,graphstyle,routestyles,weightstring,normValue,title)
                     subweight=1.0
                 approx_weight += subweight
             approx_weight = approx_weight/len(neighbors)
-        node_trace['marker']['color'].append(approx_weight)
+        # node_trace['marker']['color'].append(approx_weight)
         node_info = 'Approx. '+weightstring+':'+str(approx_weight)
         # node_trace['text'].append(node_info)
 
@@ -148,14 +148,19 @@ def networkdisplay(G,routes,graphstyle,routestyles,weightstring,normValue,title)
             sublons.append(lons[node])
             sublats.append(lats[node])
 
-
-    xmin = min(sublons)-.005; xmax = max(sublons)+.005
-    ymin = min(sublats)-.005; ymax = max(sublats)+.005
+    if(len(routes)>0):
+        xmin = min(sublons)-.005; xmax = max(sublons)+.005
+        ymin = min(sublats)-.005; ymax = max(sublats)+.005
+        x_range = [xmin,xmax]
+        y_range = [ymin,ymax]
+    else:
+        x_range = []
+        y_range = []
 
 
     # III) -Plot All Graphical Data--------------------
-    # graphicalData = route_traces+[node_trace]+edge_traces
-    graphicalData = route_traces+edge_traces
+    graphicalData = route_traces+[node_trace]+edge_traces
+    # graphicalData = route_traces+edge_traces
     fig = Figure(data=Data(graphicalData),
                  layout=Layout(
                     title='<br>'+title,
@@ -168,8 +173,8 @@ def networkdisplay(G,routes,graphstyle,routestyles,weightstring,normValue,title)
                         showarrow=False,
                         xref="paper", yref="paper",
                         x=0.005, y=-0.002 ) ],
-                    xaxis=XAxis(showgrid=False, zeroline=False, showticklabels=False,range=[xmin,xmax]),
-                    yaxis=YAxis(showgrid=False, zeroline=False, showticklabels=False,range=[ymin,ymax])))
+                    xaxis=XAxis(showgrid=False, zeroline=False, showticklabels=False,range=x_range),
+                    yaxis=YAxis(showgrid=False, zeroline=False, showticklabels=False,range=y_range)))
 
     # # Plot Legend
     # patches = []
@@ -181,10 +186,23 @@ def networkdisplay(G,routes,graphstyle,routestyles,weightstring,normValue,title)
     plot(fig, filename='networkx.html')
 
 
-
-
-
-
+#
+# # Load Network
+# cwd = os.getcwd()
+# filename = "OSMNetworkReducedSet.gexf"
+# filepath = os.path.abspath(os.path.join(cwd, '..', 'Project Data','Networks',filename))
+# fh=open(filepath,'rb')
+# G = nx.read_gexf(fh)
+# fh.close
+# filename = "OSMNetwork.gexf"
+# filepath = os.path.abspath(os.path.join(cwd, '..', 'Project Data','Networks',filename))
+# fh=open(filepath,'rb')
+# H = nx.read_gexf(fh)
+# fh.close
+#
+# from numpy import std
+# Zen_std = std(nx.get_edge_attributes(G,'Zenness').values())
+# networkdisplay(G,[],'RdYlBu_r',[],'Zenness',Zen_std,'Zen Score Validation')
 
 
 
@@ -242,7 +260,7 @@ if set == 1:
     line=Line(
         width=0.5,
         reversescale=True,
-        color='#a9a9a9',
+        color='#a6a6a6',
         ),
     hoverinfo='none',
     mode='lines')
@@ -271,7 +289,7 @@ if set == 1:
         x=(x0, x1),
         y=(y0, y1),
         line=Line(
-            width=0.5,
+            width=1.2,
             reversescale=True,
             color=hexstring,
             ),
@@ -293,7 +311,7 @@ if set == 1:
             # Jet' | 'RdBu' | 'Blackbody' | 'Earth' | 'Electric' | 'YIOrRd' | 'YIGnBu'
             colorscale=colormaptype,
             reversescale=False,
-            color=[],
+            color='#e8e8e8',
             size=10,
             colorbar=dict(
                 thickness=15,
@@ -319,15 +337,19 @@ if set == 1:
             for neighbor in neighbors:
                 zenness += G[node][neighbor]['Zenness']/maxZenscore
             approx_zenness = zenness/len(neighbors)
-        node_trace['marker']['color'].append(approx_zenness)
+        # node_trace['marker']['color'].append(approx_zenness)
         node_info = 'Approx. Zenness: '+str(approx_zenness)
         node_trace['text'].append(node_info)
+
+    # from numpy import multiply
+    # MAXvalue = max(node_trace['marker']['color'])
+    # node_trace['marker']['color'] = multiply(node_trace['marker']['color'],1.0/MAXvalue)
 
     # Plot Network Graph
 
     fig = Figure(data=Data([city_trace,node_trace]+edge_traces),
                  layout=Layout(
-                    title='<br>Zen Route Example',
+                    title='<br>Zen Score Validation',
                     titlefont=dict(size=16),
                     showlegend=False,
                     hovermode='closest',
