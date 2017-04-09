@@ -5,6 +5,7 @@ import networkx as nx
 import json
 import numpy as np
 from ParetoFrontier import rand_paretofront
+import matplotlib.patches as mpatches
 
 # # Load Network
 # cwd = os.getcwd()
@@ -19,7 +20,17 @@ from ParetoFrontier import rand_paretofront
 # rand_paretofront(G,weights,['Zenness','currenttime'],numunique,'Zenness')
 
 
+# Print Legend for Plot
 
+list = ['#ffff4d','#66ff66','#00cd00','#008b00']
+names = ['[0.00-0.42]','[0.47-0.79]','[0.84-1.00]']
+
+patches = []
+for color,name in zip(list,names):
+    patch = mpatches.Patch(color=color, label=name)
+    patches.append(patch)
+plt.legend(handles = patches)
+plt.show()
 
 
 # Print Bar Graph of Gradient Optimization

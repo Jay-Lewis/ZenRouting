@@ -31,6 +31,7 @@ for filename in files:
 # Zen Relevance vs. Average Congestion
 averageCongestion = []
 averageZenRatio = []
+averageZenRatio2 = []
 averageZenDiff = []
 numpairs = 1000
 
@@ -42,6 +43,7 @@ for G in Graphs:
     zenscores = nx.get_edge_attributes(G,'Zenness').values()
 
     Zenratio = 0
+    Zenratio2 = 0
     ZenDiffs = 0
     for pair in randpairs:
         # Set Origin and Destination
@@ -58,11 +60,13 @@ for G in Graphs:
         TimeDiff = ZenpathInfo['currenttime']-FastpathInfo['currenttime']
 
         if(TimeDiff > 0 and ZenDiff > 0):
-            Zenratio += ZenDiff/TimeDiff
+            Zenratio += (ZenDiff/FastpathInfo['Zenness'])/(TimeDiff/FastpathInfo['currenttime'])
+            Zenratio2 += ZenDiff/(TimeDiff/FastpathInfo['currenttime'])
             ZenDiffs += ZenDiff
 
     if(Zenratio != 0):
         averageZenRatio.append(Zenratio/numpairs)
+        averageZenRatio2.append(Zenratio2/numpairs)
         averageZenDiff.append(ZenDiffs/numpairs)
         averageCongestion.append(np.mean(zenscores))
 
@@ -71,7 +75,12 @@ for G in Graphs:
 fig,ax = plt.subplots()
 plt.scatter(averageCongestion,averageZenRatio,s=10)
 plt.xlabel('Average Network Congestion')
-plt.ylabel('Average Zen/Time Tradeoff')
+plt.ylabel('Average Tradeoff Ratio')
+
+fig,ax = plt.subplots()
+plt.scatter(averageCongestion,averageZenRatio2,s=10)
+plt.xlabel('Average Network Congestion')
+plt.ylabel('Average Tradeoff Ratio')
 
 fig,ax = plt.subplots()
 plt.scatter(averageCongestion,averageZenDiff,s=10)
@@ -93,4 +102,23 @@ plt.show()
 # # Plot Networks
 # for G in Graphs:
 #     networkdisplay(G,[],'RdYlBu_r',[],maxZenscore,str(G.graph['datetime']))
+
+
+# # Plot Most Congested and Least Congested
+# minindex = averageCongestion.index(min(averageCongestion))
+# maxindex = averageCongestion.index(max(averageCongestion))
+#
+# Zen_std = np.std(nx.get_edge_attributes(Graphs[minindex],'Zenness').values())
+# networkdisplay(Graphs[minindex],routes=[],graphstyle='RdYlBu_r',routestyles = [],
+#                weightstring='Zenness',normValue=6.0*Zen_std, title='Minimum Congestion Slice')
+#
+# networkdisplay(Graphs[maxindex],routes=[],graphstyle='RdYlBu_r',routestyles = [],
+#                weightstring='Zenness',normValue=6.0*Zen_std, title='Maximum Congestion Slice')
+#
+# # Get Most and Least Zen Relevant Network
+# minindex = averageZenRatio2.index(min(averageZenRatio2))
+# maxindex = averageZenRatio2.index(max(averageZenRatio2))
+#
+# print('Best Zen Ratio:',files[maxindex])
+# print('Worst Zen Ratio:',files[minindex])
 

@@ -30,6 +30,14 @@ filepath = os.path.abspath(os.path.join(cwd, '..', 'Project Data','Networks',fil
 fh=open(filepath,'rb')
 G = nx.read_gexf(fh)
 
+# Load Network
+cwd = os.getcwd()
+filename = "13-16(26-3-2017).gexf"
+filepath = os.path.abspath(os.path.join(cwd, '..', 'Project Data','Networks','CstatHistory',filename))
+fh=open(filepath,'rb')
+G = nx.read_gexf(fh)
+
+
 userweight_history = []
 pathinfo_history = []
 choice_history = []
