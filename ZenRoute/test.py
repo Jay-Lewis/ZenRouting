@@ -33,6 +33,46 @@ plt.legend(handles = patches)
 plt.show()
 
 
+
+
+# Print Graph of Gradient Optimization
+
+# Load Data
+cwd = os.getcwd()
+folder = filepath = os.path.abspath(os.path.join(cwd, '..', 'Project Data','GradientOptimization','Justin'))
+
+filename = "ErrorDistribution.json"
+filepath = os.path.abspath(os.path.join(folder,filename))
+with open(filepath) as data:
+    errorProbs = json.load(data)
+
+filename = "zenweights.json"
+filepath = os.path.abspath(os.path.join(folder,filename))
+with open(filepath) as data:
+    zenweights = json.load(data)
+
+# Resort Data
+
+print(zenweights)
+print(errorProbs)
+indices = np.argsort(np.array(zenweights))
+zenweights.sort()
+errorProbs = [errorProbs[index] for index in indices]
+
+# Plot Data
+
+fig,ax = plt.subplots()
+ax.plot(zenweights,np.multiply(errorProbs,35.0/35.0))
+ax.set_xlim([0,1])
+plt.title('Probability of Error vs. Zenweight')
+plt.xlabel('Zenweight')
+plt.ylabel('Prob. of Error')
+plt.show()
+
+
+
+
+
 # Print Bar Graph of Gradient Optimization
 
 # Load Data
