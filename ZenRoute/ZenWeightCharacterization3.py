@@ -120,7 +120,7 @@ for _ in range(0,numiter,1):
     print("'s' for skip  and  'r' for refine:")
     string = sys.stdin.readline()
     if(string[0] != 'r' and string[0] != 's'):
-        chosenindices = [int(element) for index,element in enumerate(string) if(index % 2 == 0) ]
+       chosenindices = [int(element) for index,element in enumerate(string) if(index % 2 == 0) ]
 
 
 
