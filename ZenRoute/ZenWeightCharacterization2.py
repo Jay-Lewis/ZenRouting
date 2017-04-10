@@ -13,6 +13,7 @@ from GenRandomNodes import randomnodes
 from ParetoFrontier import rand_paretofront
 import matplotlib.pyplot as plt
 from random import shuffle
+import matplotlib.patches as mpatches
 
 # DESCRIPTION: Generate Estimate of Factor Weight Error Distribution
 #
@@ -23,6 +24,9 @@ weights = linspace(0,1,numweights)
 weightchosen = {weight:0 for weight in weights}
 uniquerange = [3,5]
 numiter = 30
+
+print('Enter your first name: ')
+person = sys.stdin.readline()[0:-1]
 
 # Load Network
 cwd = os.getcwd()
@@ -59,8 +63,15 @@ for _ in range(0,numiter,1):
 
     # Plot All Route Options
     routestyles=[]
-    # listcolors = ['#cc9999','#ccff99','#999933','#ffcc99','#996633','#767777']
-    listcolors = ['#ffff4d','#66ff66','#00cd00','#008b00','#006400','#cc9999','#ccff99','#999933']
+    listcolors = ['#cc9999','#ccff99','#999933','#ffcc99','#996633','#767777']
+    # listcolors = ['#ffff4d','#66ff66','#00cd00','#008b00','#006400','#cc9999','#ccff99','#999933']
+
+    patches = []
+    for index,color in enumerate(listcolors):
+        patch = mpatches.Patch(color=color, label='Route '+str(index))
+        patches.append(patch)
+    plt.legend(handles = patches)
+    plt.show()
 
     for index in range(0,len(paths),1):
         dict = {'color': listcolors[index],'width': 10,'name': 'Route '+str(index)+':'}
@@ -153,7 +164,7 @@ plt.show()
 
 # Save Information
 
-folder = filepath = os.path.abspath(os.path.join(cwd, '..', 'Project Data','GradientOptimization'))
+folder = filepath = os.path.abspath(os.path.join(cwd, '..', 'Project Data',person,'GradientOptimization'))
 
 filename = "ErrorDistribution3.json"
 filepath = os.path.abspath(os.path.join(folder,filename))
