@@ -85,7 +85,7 @@ scale = (1.0-min(errorProbs))/MAXgauss_error
 best_weight = mean+shift
 maxiter = 1000
 threshold = 0.1
-MAlen = 5
+MAlen = 20
 
 # Algorithm Loop START
 y = []
@@ -145,6 +145,9 @@ for index in range(0,len(weighthistory),1):
 fig,ax = plt.subplots()
 ax.plot(range(0,len(averages)),averages)
 ax.plot(range(0,len(averages)),[best_weight for i in range(0,len(averages))] )
+plt.title('Ascent / Descent Algorithm')
+plt.xlabel('Iteration')
+plt.ylabel('Lambda Estimation')
 plt.show()
 
 
@@ -154,7 +157,7 @@ plt.show()
 
 
 # Iterative Ascent/Descent Algorithm (Sweep Deltas)
-if(True):
+if(False):
     AVGiters = []
     deltas = np.linspace(0.03,.22,20)
     for delta in deltas:
